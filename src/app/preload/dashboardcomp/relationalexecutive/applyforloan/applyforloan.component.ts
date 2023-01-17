@@ -20,7 +20,7 @@ export class ApplyforloanComponent {
 
   Empregister = this.fb.group({
 
-    customer: this.fb.group({
+    customerdetails: this.fb.group({
       customerId:[],
       customerFirstName: this.fb.control('', Validators.required),
       customerMiddleName: this.fb.control('', Validators.required),
@@ -97,7 +97,7 @@ export class ApplyforloanComponent {
   });
 
   get customerform() {
-    return this.Empregister.get("customer") as FormGroup;
+    return this.Empregister.get("customerdetails") as FormGroup;
   }
   get addressdetailsform() {
     return this.Empregister.get("customerAddress") as FormGroup;
@@ -154,19 +154,19 @@ goForward(stepper: MatStepper){
   
   HandleSubmit() {
     
-    this.cs.customerdetails.customerFirstName=this.Empregister.get("customer").get("customerFirstName").value
-    this.cs.customerdetails.customerMiddleName=this.Empregister.get("customer").get("customerMiddleName").value
-    this.cs.customerdetails.customerLastName=this.Empregister.get("customer").get("customerLastName").value
-    this.cs.customerdetails.customerMobileNumber=this.Empregister.get("customer").get("customerMobileNumber").value
-    this.cs.customerdetails.customerAdditionalMobileNumber=this.Empregister.get("customer").get("customerAdditionalMobileNumber").value
-    this.cs.customerdetails.customerPanCard=this.Empregister.get("customer").get("customerPanCard").value
-    this.cs.customerdetails.customerAadharCard=this.Empregister.get("customer").get("customerAadharCard").value
-    this.cs.customerdetails.customerDateOfBirth=this.Empregister.get("customer").get("customerDateOfBirth").value
-    this.cs.customerdetails.customerEmail=this.Empregister.get("customer").get("customerEmail").value
-    this.cs.customerdetails.customerGender=this.Empregister.get("customer").get("customerGender").value
-    this.cs.customerdetails.customerQualification=this.Empregister.get("customer").get("customerQualification").value
-    this.cs.customerdetails.customerCibilScore=this.Empregister.get("customer").get("customerCibilScore").value
-    this.cs.customerdetails.customerLoanStatus=this.Empregister.get("customer").get("customerLoanStatus").value
+    this.cs.customerdetails.customerFirstName=this.Empregister.get("customerdetails").get("customerFirstName").value
+    this.cs.customerdetails.customerMiddleName=this.Empregister.get("customerdetails").get("customerMiddleName").value
+    this.cs.customerdetails.customerLastName=this.Empregister.get("customerdetails").get("customerLastName").value
+    this.cs.customerdetails.customerMobileNumber=this.Empregister.get("customerdetails").get("customerMobileNumber").value
+    this.cs.customerdetails.customerAdditionalMobileNumber=this.Empregister.get("customerdetails").get("customerAdditionalMobileNumber").value
+    this.cs.customerdetails.customerPanCard=this.Empregister.get("customerdetails").get("customerPanCard").value
+    this.cs.customerdetails.customerAadharCard=this.Empregister.get("customerdetails").get("customerAadharCard").value
+    this.cs.customerdetails.customerDateOfBirth=this.Empregister.get("customerdetails").get("customerDateOfBirth").value
+    this.cs.customerdetails.customerEmail=this.Empregister.get("customerdetails").get("customerEmail").value
+    this.cs.customerdetails.customerGender=this.Empregister.get("customerdetails").get("customerGender").value
+    this.cs.customerdetails.customerQualification=this.Empregister.get("customerdetails").get("customerQualification").value
+    this.cs.customerdetails.customerCibilScore=this.Empregister.get("customerdetails").get("customerCibilScore").value
+    this.cs.customerdetails.customerLoanStatus=this.Empregister.get("customerdetails").get("customerLoanStatus").value
     
     this.cs.customerdetails.customerAddress=this.Empregister.get("customerAddress").value
     this.cs.customerdetails.customerAddress.addressId=this.Empregister.get("customerAddress").get("addressId").value

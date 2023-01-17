@@ -5,13 +5,15 @@
             <mat-step [stepControl]="customerform">
 
                 <!-- 1st form here -->
-                <div formGroupName="customer">
+                <div formGroupName="customerdetails">
                     <ng-template matStepLabel>Fill Basic Details</ng-template>
                         <!-- <p> -->
                         <mat-form-field appearance="outline">
                             <!-- <mat-label>First Name</mat-label> -->
                             <input matInput formControlName="customerFirstName" required placeholder="First Name">
+                        
                         </mat-form-field>
+                        
                     <!-- </p> -->
                         <mat-form-field appearance="outline">
                             <!-- <mat-label>Last Name</mat-label> -->
@@ -306,29 +308,29 @@
             <mat-step label="ALL Details">
 
                 <mat-list>
-                    <mat-list-item> <strong>First Name:</strong> {{ this.Empregister.value.customer.customerFirstName
+                    <mat-list-item> <strong>First Name:</strong> {{ this.Empregister.value.customerdetails.customerFirstName
                         }}</mat-list-item>
-                    <mat-list-item> <strong>First Name:</strong> {{ this.Empregister.value.customer.customerMiddleName
+                    <mat-list-item> <strong>First Name:</strong> {{ this.Empregister.value.customerdetails.customerMiddleName
                         }}</mat-list-item>
-                    <mat-list-item> <strong>First Name:</strong> {{ this.Empregister.value.customer.customerLastName
+                    <mat-list-item> <strong>First Name:</strong> {{ this.Empregister.value.customerdetails.customerLastName
                         }}</mat-list-item>
-                    <mat-list-item> <strong>First Name:</strong> {{ this.Empregister.value.customer.customerMobileNumber
+                    <mat-list-item> <strong>First Name:</strong> {{ this.Empregister.value.customerdetails.customerMobileNumber
                         }}</mat-list-item>
                     <mat-list-item> <strong>First Name:</strong> {{
-                        this.Empregister.value.customer.customerAdditionalMobileNumber }}</mat-list-item>
-                    <mat-list-item> <strong>First Name:</strong> {{ this.Empregister.value.customer.customerPanCard
+                        this.Empregister.value.customerdetails.customerAdditionalMobileNumber }}</mat-list-item>
+                    <mat-list-item> <strong>First Name:</strong> {{ this.Empregister.value.customerdetails.customerPanCard
                         }}</mat-list-item>
-                    <mat-list-item> <strong>First Name:</strong> {{ this.Empregister.value.customer.customerAadharCard
+                    <mat-list-item> <strong>First Name:</strong> {{ this.Empregister.value.customerdetails.customerAadharCard
                         }}</mat-list-item>
-                    <mat-list-item> <strong>First Name:</strong> {{ this.Empregister.value.customer.customerDateOfBirth
+                    <mat-list-item> <strong>First Name:</strong> {{ this.Empregister.value.customerdetails.customerDateOfBirth
                         }}</mat-list-item>
-                    <mat-list-item> <strong>First Name:</strong> {{ this.Empregister.value.customer.customerEmail
+                    <mat-list-item> <strong>First Name:</strong> {{ this.Empregister.value.customerdetails.customerEmail
                         }}</mat-list-item>
-                    <mat-list-item> <strong>First Name:</strong> {{ this.Empregister.value.customer.customerQualification
+                    <mat-list-item> <strong>First Name:</strong> {{ this.Empregister.value.customerdetails.customerQualification
                         }}</mat-list-item>
-                    <mat-list-item> <strong>First Name:</strong> {{ this.Empregister.value.customer.customerCibilScore
+                    <mat-list-item> <strong>First Name:</strong> {{ this.Empregister.value.customerdetails.customerCibilScore
                         }}</mat-list-item>
-                    <mat-list-item> <strong>First Name:</strong> {{ this.Empregister.value.customer.customerLoanStatus
+                    <mat-list-item> <strong>First Name:</strong> {{ this.Empregister.value.customerdetails.customerLoanStatus
                         }}</mat-list-item>
                      </mat-list>
                 <br><br><br>

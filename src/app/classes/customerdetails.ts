@@ -4,8 +4,11 @@ import { CustomerBankDetails } from "./customer-bank-details";
 import { CustomerProfession } from "./customer-profession";
 import { CustomerVehicleInformation } from "./customer-vehicle-information";
 import { Dealer } from "./dealer";
+import { Ledger } from "./ledger";
+import { LoanDisbursement } from "./loan-disbursement";
+import { SanctionLetter } from "./sanction-letter";
 
-export class Customer {
+export class Customerdetails {
     customerId:number;
 
     
@@ -30,5 +33,8 @@ export class Customer {
     customerDealer:Dealer;
     customerBankDetails:CustomerBankDetails;
     customerVehicleInformation:CustomerVehicleInformation;
+    customerLoanDisbursement:LoanDisbursement;
+    customerLedger:Ledger;
+    customerSanctionLetter:SanctionLetter;
     
 }

@@ -10,10 +10,7 @@ export class Menu {
             ], 
 
             operationalexc:[
-                {key:"fromfillup",label:"Form Fill Up"},
-                {key:"cibilscore",label:"Check CIBIL Score"},
-                {key:"filevarification",label:"File Varification"},
-                {key:"sanctionletter",label:"Upload Sanction Letter"},
+                {key:"filevarification",label:"Verify Application"},
                 
               ],
              creditmanager:[

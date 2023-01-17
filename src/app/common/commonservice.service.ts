@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Customer } from '../classes/customer';
+import {  Customerdetails } from '../classes/customerdetails';
 import { CustomerAddress } from '../classes/customer-address';
 import { CustomerAllDocuments } from '../classes/customer-all-documents';
 import { CustomerBankDetails } from '../classes/customer-bank-details';
@@ -8,6 +8,9 @@ import { CustomerProfession } from '../classes/customer-profession';
 import { CustomerVehicleInformation } from '../classes/customer-vehicle-information';
 import { Dealer } from '../classes/dealer';
 import { Enquirymodel } from '../classes/enquirymodel';
+import { Ledger } from '../classes/ledger';
+import { LoanDisbursement } from '../classes/loan-disbursement';
+import { SanctionLetter } from '../classes/sanction-letter';
 
 
 @Injectable({
@@ -29,28 +32,31 @@ export class CommonserviceService {
    enquiryId: 0
  }
 
- customerdetails:Customer={
-  customerId: 0,
-  customerFirstName: '',
-  customerMiddleName: '',
-  customerLastName: '',
-  customerMobileNumber: 0,
-  customerAdditionalMobileNumber: 0,
-  customerPanCard: '',
-  customerAadharCard: 0,
-  customerDateOfBirth: '',
-  customerEmail: '',
-  customerGender: '',
-  customerQualification: '',
-  customerCibilScore: 0,
-  customerLoanStatus: '',
-  customerAllDocuments: new CustomerAllDocuments,
-  customerAddress: new CustomerAddress,
-  customerProfession: new CustomerProfession,
-  customerDealer: new Dealer,
-  customerBankDetails: new CustomerBankDetails,
-  customerVehicleInformation: new CustomerVehicleInformation
-}
+ customerdetails:Customerdetails={
+   customerId: 0,
+   customerFirstName: '',
+   customerMiddleName: '',
+   customerLastName: '',
+   customerMobileNumber: 0,
+   customerAdditionalMobileNumber: 0,
+   customerPanCard: '',
+   customerAadharCard: 0,
+   customerDateOfBirth: '',
+   customerEmail: '',
+   customerGender: '',
+   customerQualification: '',
+   customerCibilScore: 0,
+   customerLoanStatus: '',
+   customerAllDocuments: new CustomerAllDocuments,
+   customerAddress: new CustomerAddress,
+   customerProfession: new CustomerProfession,
+   customerDealer: new Dealer,
+   customerBankDetails: new CustomerBankDetails,
+   customerVehicleInformation: new CustomerVehicleInformation,
+   customerLoanDisbursement: new LoanDisbursement,
+   customerLedger: new Ledger,
+   customerSanctionLetter: new SanctionLetter
+ }
 
  PostEnquiry()
  {
@@ -76,4 +82,12 @@ export class CommonserviceService {
      alert('in service')
      return this.http.post(" http://localhost:9091/customer/postCustomer",data);  
  }
+ getCustomer()
+ {
+  return this.http.get("http://localhost:9091/customer/getcustomer");
+ }
+  getSingleCustomer(id:any)
+  {
+    return this.http.get("http://localhost:9091/customer/getsingleCutomer/"+id);
+  }
 }

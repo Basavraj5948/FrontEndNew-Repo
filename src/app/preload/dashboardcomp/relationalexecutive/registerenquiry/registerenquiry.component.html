@@ -1,0 +1,66 @@
+
+<body style="height: 110%;">
+	<div class="bgImg"></div>
+	<div class="content" >
+		<div class="d-flex h-100 align-items-center justify-content-center" >
+			<div class="container">
+				<div class="row">
+					<div class="col-md-0 col-sm-9 ml-auto mr-auto">
+						<div class="card" style="height: 700px;">
+							<div class="card-body">
+								<form [formGroup]="enquiry" (ngSubmit)="RaiseEnquiry()">
+									<div class="glowBox">
+										<h4 class="title" style="font-size: 30px;font-weight: 900;color: rgb(57, 50, 50);">Register Enquiry here !!</h4>
+									</div>
+								
+								
+								<div class="signUp">
+									<span>
+										<input type="text" class="form" placeholder="Customer First Name" autocomplete="off" style="cursor: auto;" formControlName="customerFirstName" >
+										<span class="underline"></span>
+                                        <span class="label" style="color: red;" *ngIf="customerFirstName && customerFirstName.invalid  && customerFirstName.touched">Please enter valid First Name</span>
+									</span>
+									<span>
+										<input type="text" class="form" placeholder="Customer Last Name" autocomplete="off" style="cursor: auto;"  formControlName="customerLastName">
+										<span class="underline"></span>
+                                        <span class="label" style="color: red;" *ngIf="customerLastName && customerLastName.invalid  && customerLastName.touched">Please enter valid Last Name</span>
+									</span>
+									<span>
+										<input type="text" class="form" placeholder="Customer Pancard" autocomplete="off" style="cursor: auto;"  formControlName="panCard">
+										<span class="underline"></span>
+                                        <span class="label" style="color: red;" *ngIf="panCard && panCard.invalid  && panCard.touched">Please enter valid Pancard Number</span>
+									</span>
+                                    <span>
+										<input type="text" class="form" placeholder="Customer Aadhar Card" autocomplete="off" style="cursor: auto;" formControlName="aadharNumber">
+										<span class="underline"></span>
+                                        <span class="label" style="color: red;" *ngIf="aadharNumber && aadharNumber.invalid  && aadharNumber.touched">Please enter valid Aadhar Number</span>
+									</span>
+                                    <span>
+										<input type="text" class="form" placeholder="Customer Email ID" autocomplete="off" style="cursor: auto;" formControlName="emailId">
+										<span class="underline"></span>
+                                        <span class="label" style="color: red;" *ngIf="emailId && emailId.invalid  && emailId.touched">Please enter valid Email ID</span>
+									</span>
+                                    <span>
+										<input type="text" class="form" placeholder="Customer Mobile Number" autocomplete="off" style="cursor: auto;"  formControlName="mobileNumber">
+										<span class="underline"></span>
+                                        <span class="label" style="color: red;" *ngIf="mobileNumber && mobileNumber.invalid  && mobileNumber.touched">Please enter valid Mobile Number</span>
+									</span>
+                                    <span>
+										<button mat-raised-button color="primary" type="submit" style="margin-left: 320px;"[disabled]="enquiry.invalid">Raise Enquiry</button>
+									</span>
+                                  
+								</div>
+								
+                        </form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<!-- Bootstrap Scripts -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>

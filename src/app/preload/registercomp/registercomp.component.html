@@ -1,0 +1,68 @@
+
+<!-- This snippet uses Font Awesome 5 Free as a dependency. You can download it at fontawesome.io! -->
+
+<body>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 col-xl-9 mx-auto" >
+          <div class="card card-signin flex-row my-3">
+            <div class="card-img-left d-none d-md-flex">
+               <!-- Background image for card set in CSS! -->
+            </div>
+            <div class="card-body">
+              <h5 class="card-title text-center" style="font-weight: 900;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+              font-size: 30px;">Register Enquiry here !!</h5>
+              <form class="form-signin" [formGroup]="enquiry" (ngSubmit)="RaiseEnquiry()">
+                <label style="font-size: 18px;font-weight: 500;color: rgb(9, 163, 163);">Customer First Name :</label>
+                <div class="form-label-group">
+                  <input type="text" id="inputUserame" class="form-control"  required autofocus formControlName="customerFirstName">
+                  <span class="label" style="color: red;" *ngIf="customerFirstName && customerFirstName.invalid  && customerFirstName.touched">Please enter valid customer first name</span>
+                </div>
+
+                <label style="font-size: 18px;font-weight: 500;color: rgb(9, 163, 163);">Customer Last Name :</label>
+                <div class="form-label-group">
+                  <input type="text" id="inputEmail" class="form-control"  required formControlName="customerLastName"> 
+                  <span class="label" style="color: red;" *ngIf="customerLastName && customerLastName.invalid  && customerLastName.touched">Please enter valid customer last name</span>
+                </div>
+                
+                <!-- <hr> -->
+                <label style="font-size: 18px;font-weight: 500;color: rgb(9, 163, 163);">Pancard Number :</label>
+                <div class="form-label-group">
+                  <input type="text" id="inputPassword" class="form-control"  required formControlName="panCard">
+                  <span class="label" style="color: red;" *ngIf="panCard && panCard.invalid  && panCard.touched">Please enter valid pancard number</span>
+                </div>
+                
+                <label style="font-size: 18px;font-weight: 500;color: rgb(9, 163, 163);">Adhar Number :</label>
+                <div class="form-label-group">
+                  <input type="number" id="inputConfirmPassword" class="form-control" required formControlName="aadharNumber" >
+                  <span class="label" style="color: red;" *ngIf="aadharNumber && aadharNumber.invalid  && aadharNumber.touched">Please enter valid aadhar number</span>
+                </div>
+
+                <label style="font-size: 18px;font-weight: 500;color: rgb(9, 163, 163);">Email ID :</label>
+                <div class="form-label-group">
+                  <input type="text" id="inputConfirmPassword" class="form-control" required formControlName="emailId">
+                  <span class="label" style="color: red;" *ngIf="emailId && emailId.invalid  && emailId.touched">Please enter valid email id</span>
+                </div>
+
+                <label style="font-size: 18px;font-weight: 500;color: rgb(9, 163, 163);">Mobile Number :</label>
+                <div class="form-label-group">
+                  <input type="number" id="inputConfirmPassword" class="form-control" required formControlName="mobileNumber">
+                  <span class="label" style="color: red;" *ngIf="mobileNumber && mobileNumber.invalid  && mobileNumber.touched">Please enter valid mobile number</span>
+                </div>
+              
+              
+                <br>
+                <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit"[disabled]="enquiry.invalid">Raise Enquiry</button>
+                <!-- <a class="d-block text-center mt-2 large" routerLink="/login" style="text-decoration: none;font-size: 18px;">Login</a> -->
+                <router-outlet></router-outlet>
+                <hr class="my-4">
+                <!-- <button class="btn btn-lg btn-google btn-block text-uppercase" type="submit"><i class="fab fa-google mr-2"></i> Sign up with Google</button>
+                <button class="btn btn-lg btn-facebook btn-block text-uppercase" type="submit"><i class="fab fa-facebook-f mr-2"></i> Sign up with Facebook</button> -->
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  

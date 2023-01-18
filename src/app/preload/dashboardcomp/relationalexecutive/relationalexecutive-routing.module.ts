@@ -7,6 +7,7 @@ import { CibilrejectedComponent } from './cibilrejected/cibilrejected.component'
 
 import { EnquiryComponent } from './enquiry/enquiry.component';
 import { RegisterenquiryComponent } from './registerenquiry/registerenquiry.component';
+import { ViewapplicationstatusComponent } from './viewapplicationstatus/viewapplicationstatus.component';
 
 const routes: Routes = [
   {path:"enquiry",component:EnquiryComponent},
@@ -14,6 +15,7 @@ const routes: Routes = [
   {path:"cibilapproved",component:CibilapprovedComponent},
   {path:"cibilrejected",component:CibilrejectedComponent},
   {path:"applyforloan",component:ApplyforloanComponent},
+  {path:"viewappstatus",component:ViewapplicationstatusComponent},
   
 ];
 

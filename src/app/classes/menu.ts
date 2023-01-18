@@ -6,6 +6,7 @@ export class Menu {
               {key:"registerenquiry",label:"Register new Enquiry"},
               {key:"cibilapproved",label:"CIBIL Approved"},
               {key:"cibilrejected",label:"CIBIL Rejected"},
+              {key:"viewappstatus",label:"View Application Status"},
               
             ], 
 

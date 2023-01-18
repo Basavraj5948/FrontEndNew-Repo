@@ -1,0 +1,35 @@
+
+
+<table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th  style="font-weight: 900;color: rgb(0, 238, 255);"scope="col">Customer ID</th>
+        <th  style="font-weight: 900;color: rgb(0, 251, 255);"scope="col">Customer First Name</th>
+        <th  style="font-weight: 900;color: rgb(0, 251, 255);"scope="col">Customer Middle Name</th>
+        <th  style="font-weight: 900;color: rgb(0, 234, 255);"scope="col">Customer Last Name</th>
+        <th  style="font-weight: 900;color: rgb(0, 221, 255);"scope="col">Loan Status</th>
+        <th  style="font-weight: 900;color: rgb(0, 221, 255);"scope="col">Action</th>
+        <!-- <th  style="font-weight: 900;color: rgb(0, 221, 255);"scope="col">CIBIL Score</th>
+        
+        <th  style="font-weight: 900;color: rgb(0, 221, 255);"scope="col">Check CIBIL</th>
+        <th  style="font-weight: 900;color: rgb(0, 221, 255);"scope="col">Form Fill up</th> -->
+        
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let customer of customerDetails">
+        <th scope="row">{{customer.customerId}}</th>
+        <th scope="row">{{customer.customerFirstName}}</th>
+        <th scope="row">{{customer.customerMiddleName}}</th>
+        <th scope="row">{{customer.customerLastName}}</th>
+        <th scope="row">{{customer.customerLoanStatus}}</th>
+        <th scope="row"></th>
+        
+        <!-- <td><button style="background-color: rgb(174, 106, 237);color: white;border-radius: 10px;padding: 3px;padding-left: 5px;padding-right: 5px;" (click)="sendMail(data)">Send Mail</button> </td>
+        <td><button style="background-color: rgb(174, 106, 237);color: white;border-radius: 10px;padding: 3px;padding-left: 5px;padding-right: 5px;" (click)="fillform(data)">Apply for Loan</button> </td> -->
+      </tr>
+     
+    </tbody>
+  </table>
+  

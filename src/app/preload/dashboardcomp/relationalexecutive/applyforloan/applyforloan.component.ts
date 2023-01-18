@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 import { CommonserviceService } from 'src/app/common/commonservice.service';
 import { MatStepper } from '@angular/material/stepper';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-applyforloan',
@@ -34,7 +35,7 @@ export class ApplyforloanComponent {
       customerEmail: this.fb.control('', Validators.required),
       customerQualification: this.fb.control('', Validators.required),
       customerCibilScore: this.fb.control(0, Validators.required),
-      customerLoanStatus: this.fb.control('', Validators.required)
+      // customerLoanStatus: this.fb.control('', Validators.required)
 
     }),
     customerAddress: this.fb.group({       
@@ -93,6 +94,51 @@ export class ApplyforloanComponent {
       signature: this.fb.control('', Validators.required),
       bankPassBook: this.fb.control('', Validators.required)
     }),
+    sanctionLetter:this.fb.group({
+      sanctionId:0,
+      sanctionDate: this.fb.control(''),
+      applicantName: this.fb.control(''),
+      contactDetails: this.fb.control(''),
+      loanAmountSanctioned: this.fb.control(0),
+      rateOfInterest: this.fb.control(0),
+      loanTenure:this.fb.control(0),
+      monthlyEmiAmount: this.fb.control(0),
+      termsAndCondition: this.fb.control(''),
+      sanctionStatus: this.fb.control(''),
+      sanctionLetter: this.fb.control([]),
+    }),
+    loanDisbursement:this.fb.group({
+      agreementId:this.fb.control(0),
+loanNo:this.fb.control(0),
+totalLoanAmount:this.fb.control(0),
+transferAmount:this.fb.control(0),
+amountPaidDate:this.fb.control(''),
+paymentStatus:this.fb.control(''),
+dealerBankAccountNumber:this.fb.control(0),
+dealerBankName:this.fb.control(''),
+dealerBankIfscNumber:this.fb.control(''),
+
+    }),
+    ledger:this.fb.group({
+      ledgerId:0,
+	ledgerCreatedDate:this.fb.control(''),
+	totalLoanAmount:this.fb.control(0),
+	payableAmountwithInterest:this.fb.control(0),
+	tenure:this.fb.control(0),
+	monthlyEMI:this.fb.control(0),
+	amountPaidtillDate:this.fb.control(0),
+	remainingAmount:this.fb.control(0),
+	nextEmiStartDate:this.fb.control(''),
+	nextEmiEndDate:this.fb.control(''),
+	defaulterCount:this.fb.control(0),
+	previousEmiStatus:this.fb.control(''),
+	currentMonthEmiStatus:this.fb.control(''),
+	loanEndDate:this.fb.control(''),
+	loanStatus:this.fb.control(''),
+
+
+    })
+
 
   });
 
@@ -153,6 +199,13 @@ goForward(stepper: MatStepper){
   
   
   HandleSubmit() {
+    Swal.fire({
+      position: 'top',
+      icon: 'success',
+      title: "Saving Process is started !! Wait for Back end Response",
+      showConfirmButton: false,
+      timer: 2000
+    })
     
     this.cs.customerdetails.customerFirstName=this.Empregister.get("customerdetails").get("customerFirstName").value
     this.cs.customerdetails.customerMiddleName=this.Empregister.get("customerdetails").get("customerMiddleName").value
@@ -166,7 +219,7 @@ goForward(stepper: MatStepper){
     this.cs.customerdetails.customerGender=this.Empregister.get("customerdetails").get("customerGender").value
     this.cs.customerdetails.customerQualification=this.Empregister.get("customerdetails").get("customerQualification").value
     this.cs.customerdetails.customerCibilScore=this.Empregister.get("customerdetails").get("customerCibilScore").value
-    this.cs.customerdetails.customerLoanStatus=this.Empregister.get("customerdetails").get("customerLoanStatus").value
+    //this.cs.customerdetails.customerLoanStatus=this.Empregister.get("customerdetails").get("customerLoanStatus").value
     
     this.cs.customerdetails.customerAddress=this.Empregister.get("customerAddress").value
     this.cs.customerdetails.customerAddress.addressId=this.Empregister.get("customerAddress").get("addressId").value
@@ -176,13 +229,24 @@ goForward(stepper: MatStepper){
  
     this.cs.customerdetails.customerBankDetails= this.Empregister.get("customerBankDetails").value
     this.cs.customerdetails.customerBankDetails.customerBankDetailsId= this.Empregister.get("customerBankDetails").get("customerBankDetailsId").value
+
     this.cs.customerdetails.customerDealer= this.Empregister.get("customerDealer").value
      this.cs.customerdetails.customerDealer.dealerId= this.Empregister.get("customerDealer").get("dealerId").value
+
     this.cs.customerdetails.customerVehicleInformation= this.Empregister.get("customerVehicleInformation").value
     this.cs.customerdetails.customerVehicleInformation.customerVehicleId= this.Empregister.get("customerVehicleInformation").get("customerVehicleId").value
 
+    this.cs.customerdetails.customerSanctionLetter=this.Empregister.get("sanctionLetter").value;
+    this.cs.customerdetails.customerSanctionLetter.sanctionId=this.Empregister.get("sanctionLetter").get("sanctionId").value
+
+    this.cs.customerdetails.customerLoanDisbursement=this.Empregister.get("loanDisbursement").value;
+    this.cs.customerdetails.customerLoanDisbursement.agreementId=this.Empregister.get("loanDisbursement").get("agreementId").value
+
+    this.cs.customerdetails.customerLedger=this.Empregister.get("ledger").value;
+    this.cs.customerdetails.customerLedger.ledgerId=this.Empregister.get("ledger").get("ledgerId").value;
 
   // return this.Empregister.get("customerAllDocuments").value
+  
 
 
 
@@ -201,8 +265,15 @@ goForward(stepper: MatStepper){
     data.append("bankPassBook", this.bankPassBook);
 
     
-    this.cs.saveCustomer(data).subscribe();
-    alert('saved');
+    this.cs.saveCustomer(data).subscribe((response:any)=>{
+      Swal.fire({
+        position: 'top',
+        icon: 'success',
+        title: response.message,
+        showConfirmButton: false,
+        timer: 2000
+      })
+    });
   }
   // panCard: any;
   // incomeProof: any;

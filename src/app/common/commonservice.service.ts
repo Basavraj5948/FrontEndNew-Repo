@@ -79,7 +79,6 @@ export class CommonserviceService {
  }
  saveCustomer(data:any)
  {
-     alert('in service')
      return this.http.post(" http://localhost:9091/customer/postCustomer",data);  
  }
  getCustomer()

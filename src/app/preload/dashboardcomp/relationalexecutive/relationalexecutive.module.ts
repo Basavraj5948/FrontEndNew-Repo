@@ -13,6 +13,7 @@ import {MatListModule} from '@angular/material/list';
 import { MatInputModule} from '@angular/material/input';
 import { MatIconModule} from '@angular/material/icon';
 import { MatRadioModule } from '@angular/material/radio';
+import { ViewapplicationstatusComponent } from './viewapplicationstatus/viewapplicationstatus.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { MatRadioModule } from '@angular/material/radio';
     RegisterenquiryComponent,
     CibilapprovedComponent,
     CibilrejectedComponent,
-    ApplyforloanComponent
+    ApplyforloanComponent,
+    ViewapplicationstatusComponent
   ],
   imports: [
     CommonModule,
@@ -33,7 +35,8 @@ import { MatRadioModule } from '@angular/material/radio';
     RegisterenquiryComponent,
     CibilapprovedComponent,
     CibilrejectedComponent,
-    ApplyforloanComponent
+    ApplyforloanComponent,
+    ViewapplicationstatusComponent
   ]
 })
 export class RelationalexecutiveModule { }

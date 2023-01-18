@@ -1,70 +1,249 @@
-{{customerdetails.customerCibilScore }}
+<div class="container pt-4">
+  <div class="card">
+    <div class="card-body">
+      <h1>Personal Details</h1>
+    </div>
+  </div>
+  
+<div class="row">
+  <div class="col">
+    <label>Fist Name:</label>
+    <input class="form-control" type="text" value="{{ customerdetails.customerFirstName }}" aria-label="readonly input example" readonly>
+   </div>
+   <div class="col">
+    <label>Last Name:</label>
+    <input class="form-control" type="text" value="{{ customerdetails.customerLastName }}" aria-label="readonly input example" readonly>
+   </div>
+   <div class="col">
+    <label>Middle Name:</label>
+    <input class="form-control" type="text" value="{{ customerdetails.customerMiddleName }}" aria-label="readonly input example" readonly>
+   </div>
+</div>
+<div class="row mb-5">
+  <div class="col">
+    <label>Mobile no:</label>
+    <input class="form-control" type="text" value="{{ customerdetails.customerMobileNumber }}" aria-label="readonly input example" readonly>
+   </div>
+   <div class="col">
+    <label>Alternate Mob No:</label>
+    <input class="form-control" type="text" value="{{ customerdetails.customerAdditionalMobileNumber }}" aria-label="readonly input example" readonly>
+   </div>
+   <div class="col">
+    <label>PAN No:</label>
+    <input class="form-control" type="text" value="{{ customerdetails.customerPanCard }}" aria-label="readonly input example" readonly>
+   </div>
+</div>
+<div class="row mb-5">
+  <div class="col">
+    <label>Aadhar No:</label>
+    <input class="form-control" type="text" value="{{ customerdetails.customerAadharCard }}" aria-label="readonly input example" readonly>
+   </div>
+   <div class="col">
+    <label>Bithdate:</label>
+    <input class="form-control" type="text" value="{{ customerdetails.customerDateOfBirth }}" aria-label="readonly input example" readonly>
+   </div>
+   <div class="col">
+    <label>Email:</label>
+    <input class="form-control" type="text" value="{{ customerdetails.customerEmail }}" aria-label="readonly input example" readonly>
+   </div>
+</div>
 
-<!-- <input class="c-checkbox" type="checkbox" id="start">
-<input class="c-checkbox" type="checkbox" id="progress2">
-<input class="c-checkbox" type="checkbox" id="progress3">
-<input class="c-checkbox" type="checkbox" id="finish">
-<div class="c-form__progress"></div>
+<div class="row mb-5">
+  <div class="col">
+    <label>Gender:</label>
+    <input class="form-control" type="text" value="{{ customerdetails.customerGender }}" aria-label="readonly input example" readonly>
+   </div>
+   <div class="col">
+    <label>Qualification</label>
+    <input class="form-control" type="text" value="{{ customerdetails.customerQualification }}" aria-label="readonly input example" readonly>
+   </div>
+   <div class="col">
+    <label>CIBIL Score</label>
+    <input class="form-control" type="text" value="{{ customerdetails.customerCibilScore }}" aria-label="readonly input example" readonly>
+   </div>
+</div>
+<h2>Address Details</h2>
+<h4>Local Address</h4>
+<div class="row mb-5">
+  <div class="col">
+    <label>State</label>
+    <input class="form-control" type="text" value="{{ customerdetails.customerAddress.localState }}" aria-label="readonly input example" readonly>
+   </div>
+   <div class="col">
+    <label>District</label>
+    <input class="form-control" type="text" value="{{ customerdetails.customerAddress.localDistrict }}" aria-label="readonly input example" readonly>
+   </div>
+   <div class="col">
+    <label>City</label>
+    <input class="form-control" type="text" value="{{ customerdetails.customerAddress.localCityName }}" aria-label="readonly input example" readonly>
+   </div>
+</div>
 
-<div class="c-formContainer" >
-  <div class="c-welcome"style="margin-left:1000px;margin-top: 300px;">Welcome aboard!</div>
-  <form class="c-form" action="" style="margin-left:1000px;margin-top: 250px;">
-    <div class="c-form__group">
-      <label class="c-form__label" for="username">
-                    <input
-                        type="text"
-                        id="username"
-                        class="c-form__input"
-                        placeholder=" "
-                        pattern="[^\s]+"
-                        required>
+<div class="row mb-5">
+  <div class="col">
+    <label>Area</label>
+    <input class="form-control" type="text" value="{{ customerdetails.customerAddress.localAreaName }}" aria-label="readonly input example" readonly>
+   </div>
+   <div class="col">
+    <label>Street</label>
+    <input class="form-control" type="text" value="{{ customerdetails.customerAddress.localStreetName }}" aria-label="readonly input example" readonly>
+   </div>
+   <div class="col">
+    <label>House No.</label>
+    <input class="form-control" type="text" value="{{ customerdetails.customerAddress.localHouseNumber }}" aria-label="readonly input example" readonly>
+   </div>
+   <div class="col">
+    <label>Pin</label>
+    <input class="form-control" type="text" value="{{ customerdetails.customerAddress.localPincode }}" aria-label="readonly input example" readonly>
+   </div>
+</div>
+<h4>Permanent Address</h4>
+<div class="row mb-5">
+  <div class="col">
+    <label>State</label>
+    <input class="form-control" type="text" value="{{ customerdetails.customerAddress.permanentState }}" aria-label="readonly input example" readonly>
+   </div>
+   <div class="col">
+    <label>District</label>
+    <input class="form-control" type="text" value="{{ customerdetails.customerAddress.permanentDistrict }}" aria-label="readonly input example" readonly>
+   </div>
+   <div class="col">
+    <label>City</label>
+    <input class="form-control" type="text" value="{{ customerdetails.customerAddress.permanentCityName }}" aria-label="readonly input example" readonly>
+   </div>
+</div>
 
-                    <label class="c-form__next" for="progress2" role="button">
-                        <span class="c-form__nextIcon"></span>
-                    </label>
+<div class="row mb-5">
+  <div class="col">
+    <label>Area</label>
+    <input class="form-control" type="text" value="{{ customerdetails.customerAddress.permanentAreaName }}" aria-label="readonly input example" readonly>
+   </div>
+   <div class="col">
+    <label>Street</label>
+    <input class="form-control" type="text" value="{{ customerdetails.customerAddress.permanentStreetName }}" aria-label="readonly input example" readonly>
+   </div>
+   <div class="col">
+    <label>House No.</label>
+    <input class="form-control" type="text" value="{{ customerdetails.customerAddress.permanentHouseNumber }}" aria-label="readonly input example" readonly>
+   </div>
+   <div class="col">
+    <label>Pin</label>
+    <input class="form-control" type="text" value="{{ customerdetails.customerAddress.permanentPincode }}" aria-label="readonly input example" readonly>
+   </div>
+</div>
+<h2>Profession Details</h2>
+<div class="row mb-5">
+  <div class="col">
+    <label>Type</label>
+    <input class="form-control" type="text" value="{{ customerdetails.customerProfession.professionType }}" aria-label="readonly input example" readonly>
+  </div>
+  <div class="col">
+    <label>Monthly Income</label>
+    <input class="form-control" type="text" value="{{ customerdetails.customerProfession.professionMonthlyIncome }}" aria-label="readonly input example" readonly>
+  </div>
+  <div class="col">
+    <label>Designation</label>
+    <input class="form-control" type="text" value="{{ customerdetails.customerProfession.professionDesignation }}" aria-label="readonly input example" readonly>
+  </div>
+</div>
+<h2>Bank Details</h2>
+<div class="row mb-5">
+  <div class="col">
+    <label>Bank Name</label>
+    <input class="form-control" type="text" value="{{ customerdetails.customerBankDetails.customerBankName }}" aria-label="readonly input example" readonly>
+  </div>
+  <div class="col">
+    <label>Branch</label>
+    <input class="form-control" type="text" value="{{ customerdetails.customerBankDetails.customerBankBranchName }}" aria-label="readonly input example" readonly>
+  </div>
+  <div class="col">
+    <label>Account No.</label>
+    <input class="form-control" type="text" value="{{ customerdetails.customerBankDetails.customerBankAccountNumber }}" aria-label="readonly input example" readonly>
+  </div>
+  <div class="col">
+    <label>IFSC No.</label>
+    <input class="form-control" type="text" value="{{ customerdetails.customerBankDetails.customerBankIfscNumber }}" aria-label="readonly input example" readonly>
+  </div>
+</div>
 
-      <span class="c-form__groupLabel">Create your username.</span>
-      <b class="c-form__border"></b>
-      </label>
+  <h2>Vehicle And Dealerr Details</h2>
+<div class="row mb-5">
+  <div class="col">
+    <label>Vehicle Model Name</label>
+    <input class="form-control" type="text" value="{{ customerdetails.customerVehicleInformation.customerVehicleModel }}" aria-label="readonly input example" readonly>
+  </div>
+</div>
+<h2>Dealer</h2>
+<div class="row mb-5">
+  <div class="col">
+    <label>Dealer Name</label>
+    <input class="form-control" type="text" value="{{ customerdetails.customerDealer.dealerName }}" aria-label="readonly input example" readonly>
+  </div>
+  <div class="col">
+    <label>Address</label>
+    <input class="form-control" type="text" value="{{ customerdetails.customerDealer.dealerAddress }}" aria-label="readonly input example" readonly>
+  </div>
+  <div class="col">
+    <label>Bank Name</label>
+    <input class="form-control" type="text" value="{{ customerdetails.customerDealer.dealerBankName }}" aria-label="readonly input example" readonly>
+  </div>
+</div>
+<div class="row mb-5">
+  <div class="col">
+    <label>Account No</label>
+    <input class="form-control" type="text" value="{{ customerdetails.customerDealer.dealerBankAccountNumber }}" aria-label="readonly input example" readonly>
+  </div>
+  <div class="col">
+    <label>Branch:</label>
+    <input class="form-control" type="text" value="{{ customerdetails.customerDealer.dealerBankBranchName }}" aria-label="readonly input example" readonly>
+  </div>
+  <div class="col">
+    <label>IFSC No.</label>
+    <input class="form-control" type="text" value="{{ customerdetails.customerDealer.dealerBankIfscNumber }}" aria-label="readonly input example" readonly>
+  </div>
+</div>
+<h2>Documents</h2>
+<div class="row mb-5">
+  <div class="col">
+    <!-- <label>Pancard</label> -->
+    <!-- <input class="form-control" type="text" value="{{ customerdetails.customerAllDocuments.panCard }}" aria-label="readonly input example" readonly> -->
+    <!-- <img id="image" [src]="'data:image/jpeg;base64,'+customerdetails.customerAllDocuments.panCard" > -->
+    
+  </div>  
+  <div class="col">
+    <label>AadharCard</label>
+    <!-- <input class="form-control" type="text" value="{{ customerdetails.customerAllDocuments.aadharCard }}" aria-label="readonly input example" readonly> -->
+    <img [src]="'data:image/jpeg;base64,'+customerdetails.customerAllDocuments.aadharCard">
+  </div>
+  <div class="col">
+    <label>Income Proof</label>
+    <!-- <input class="form-control" type="text" value="{{ customerdetails.customerAllDocuments.incomeProof }}" aria-label="readonly input example" readonly> -->
+    <img [src]="'data:image/jpeg;base64,'+customerdetails.customerAllDocuments.incomeProof" width="260" height="180">
+  </div>
+  </div>
+  <div class="row mb-5">
+    <div class="col">
+      <label>Photo</label>
+      <!-- <input class="form-control" type="text" value="{{ customerdetails.customerAllDocuments.photo }}" aria-label="readonly input example" readonly> -->
+      <img [src]="'data:image/jpeg;base64,'+customerdetails.customerAllDocuments.photo" width="260" height="180">
+      
+    </div>
+    <div class="col">
+      <label>Signature</label>
+      <!-- <input class="form-control" type="text" value="{{ customerdetails.customerAllDocuments.signature }}" aria-label="readonly input example" readonly> -->
+      <img [src]="'data:image/jpeg;base64,'+customerdetails.customerAllDocuments.signature" width="260" height="180">
+    </div>
+    <div class="col">
+      <label>Bank Passbook</label>
+      <!-- <input class="form-control" type="text" value="{{ customerdetails.customerAllDocuments.bankPassBook }}" aria-label="readonly input example" readonly> -->
+      <img [src]="'data:image/jpeg;base64,'+customerdetails.customerAllDocuments.bankPassBook" width="260" height="180">
+    </div>
+    </div>
+  
+    <div>
+   <button class="btn btn-success" type="button" (click)="docverified(customerdetails.customerId)">Verified</button>
+   <button class="btn btn-danger" type="button" (click)="docrejected(customerdetails.customerId)">Rejected</button>
+
     </div>
 
-    <div class="c-form__group">
-      <label class="c-form__label" for="femail">
-                    <input
-                        type="email"
-                        id="femail"
-                        class="c-form__input"
-                        placeholder=" "
-                        pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$"
-                        required>
-
-                    <label class="c-form__next" for="progress3" role="button">
-                        <span class="c-form__nextIcon"></span>
-                    </label>
-
-      <span class="c-form__groupLabel">What's your email?</span>
-      <b class="c-form__border"></b>
-      </label>
-    </div>
-
-    <div class="c-form__group">
-      <label class="c-form__label" for="fpass">
-                    <input
-                        type="password"
-                        id="fpass"
-                        class="c-form__input"
-                        placeholder=" "
-                        required>
-
-                    <label class="c-form__next" for="finish" role="button">
-                        <span class="c-form__nextIcon"></span>
-                    </label>
-
-      <span class="c-form__groupLabel" >Create your password. </span>
-      <b class="c-form__border"></b>
-      </label>
-    </div>
-
-    <label  class="c-form__toggle" for="start">Register<span class="c-form__toggleIcon" ></span></label>
-  </form>
-</div> -->
+</div>

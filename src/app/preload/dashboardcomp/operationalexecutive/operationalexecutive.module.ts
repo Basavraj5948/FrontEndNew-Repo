@@ -4,6 +4,8 @@ import { CommonModule } from '@angular/common';
 import { OperationalexecutiveRoutingModule } from './operationalexecutive-routing.module';
 
 import { FilevarificationComponent } from './filevarification/filevarification.component';
+import { ViewapplicantformComponent } from './viewapplicantform/viewapplicantform.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -11,15 +13,17 @@ import { FilevarificationComponent } from './filevarification/filevarification.c
   declarations: [
   
     FilevarificationComponent,
+       ViewapplicantformComponent,
     
   ],
   imports: [
     CommonModule,
-    OperationalexecutiveRoutingModule
+    OperationalexecutiveRoutingModule,ReactiveFormsModule
   ],
   exports:[
    
     FilevarificationComponent,
+    ViewapplicantformComponent,
   
   ]
 })

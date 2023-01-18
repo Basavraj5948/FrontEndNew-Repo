@@ -9,9 +9,8 @@ import { LoanDisbursement } from "./loan-disbursement";
 import { SanctionLetter } from "./sanction-letter";
 
 export class Customerdetails {
-    customerId:number;
-
     
+    customerId:number;
     customerFirstName:string;
     customerMiddleName:string;
     customerLastName:string;
@@ -21,8 +20,6 @@ export class Customerdetails {
     customerAadharCard:number;
     customerDateOfBirth:string;
     customerEmail:string;
-
-
     customerGender:string;
     customerQualification:string;
     customerCibilScore:number;

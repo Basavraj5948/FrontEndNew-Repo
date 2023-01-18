@@ -4,14 +4,9 @@
         <th  style="font-weight: 900;color: rgb(0, 251, 255);"scope="col">Customer First Name</th>
         <th  style="font-weight: 900;color: rgb(0, 251, 255);"scope="col">Customer Middle Name</th>
         <th  style="font-weight: 900;color: rgb(0, 234, 255);"scope="col">Customer Last Name</th>
-        <th  style="font-weight: 900;color: rgb(0, 221, 255);"scope="col">Pancard</th>
-        <th  style="font-weight: 900;color: rgb(0, 221, 255);"scope="col">Adhar Number</th>
-        <th  style="font-weight: 900;color: rgb(0, 221, 255);"scope="col">Mobile Number</th>
-        <th  style="font-weight: 900;color: rgb(0, 221, 255);"scope="col">Email ID</th>
         <th  style="font-weight: 900;color: rgb(0, 221, 255);"scope="col">CIBIL Score</th>
-        <!-- <th  style="font-weight: 900;color: rgb(0, 221, 255);"scope="col">CIBIL Status</th> -->
-        <!-- <th  style="font-weight: 900;color: rgb(0, 221, 255);"scope="col">Check CIBIL</th> -->
-        <th  style="font-weight: 900;color: rgb(0, 221, 255);"scope="col">Form Fill up</th>
+        <th  style="font-weight: 900;color: rgb(0, 221, 255);"scope="col">Loan Status</th>
+        <th  style="font-weight: 900;color: rgb(0, 221, 255);"scope="col">Verify Details</th>
       </tr>
     </thead>
     <tbody>
@@ -19,13 +14,9 @@
         <th scope="row">{{ca.customerFirstName}}</th>
         <td>{{ca.customerMiddleName}}</td>
         <td>{{ca.customerLastName}}</td>
-         <td>{{ca.customerPanCard}}</td>
-         <td>{{ca.customerAadharCard}}</td>
-        <td>{{ca.customerMobileNumber}}</td>
-        <td>{{ca.customerEmail}}</td>
-        <td>{{ca.customerCibilScore}}</td>  
-        <!-- <td> <i class="fa fa-credit-card" style="font-size:25px;color:red;cursor: pointer;" ></i></td> -->
-        <td><i class="fa fa-id-card" style="font-size:24px;cursor: pointer;"(click)="onclicksinglecustomer(ca.customerId)"></i></td>
+         <td>{{ca.customerCibilScore}}</td>
+         <td>{{ca.customerLoanStatus}}</td>
+        <td> <button style="background-color: rgb(174, 106, 237);color: white;border-radius: 10px;padding: 3px;padding-left: 5px;padding-right: 5px;" (click)="viewDetails(ca)" >Verify Details</button></td>
       </tr>
      
     </tbody>

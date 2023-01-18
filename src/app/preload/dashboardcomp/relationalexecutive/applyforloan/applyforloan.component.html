@@ -1,11 +1,12 @@
 <!-- <div class="example-container"> -->
     <form [formGroup]="Empregister" (ngSubmit)="HandleSubmit()">
         <mat-stepper [linear]="isLinear" #stepper labelPosition="bottom">
-
+            <!-- for each next step that form Data will be stored in the given form -->
             <mat-step [stepControl]="customerform">
 
                 <!-- 1st form here -->
                 <div formGroupName="customerdetails">
+                    <!-- label for Each form will be displayed here -->
                     <ng-template matStepLabel>Fill Basic Details</ng-template>
                         <!-- <p> -->
                         <mat-form-field appearance="outline">
@@ -52,8 +53,8 @@
 
                         <label>Gender: </label>
                         <mat-radio-group formControlName="customerGender">
-                            <mat-radio-button value="auto">Male</mat-radio-button>
-                            <mat-radio-button value="always">Female</mat-radio-button>
+                            <mat-radio-button value="Male">Male</mat-radio-button>
+                            <mat-radio-button value="Female">Female</mat-radio-button>
                             <!-- <input type="date" matInput formControlName="customerGender" required placeholder="Gender of Birth"> -->
 
                         </mat-radio-group>
@@ -74,10 +75,11 @@
                             <!-- <mat-label>CIBIL score</mat-label> -->
                             <input matInput formControlName="customerCibilScore" required placeholder="CIBIL score">
                         </mat-form-field>
-                        <mat-form-field appearance="outline">
+                        
+                        <!-- <mat-form-field appearance="outline"> -->
                             <!-- <mat-label>Loan Status</mat-label> -->
-                            <input matInput formControlName="customerLoanStatus" required placeholder="Loan Status">
-                        </mat-form-field>
+                            <!-- <input matInput formControlName="customerLoanStatus" required placeholder="Loan Status">
+                        </mat-form-field> -->
                     
                     <div>
                         <button mat-raised-button color="primary" matStepperNext type="button">Next</button>
@@ -275,27 +277,27 @@
                 <!-- <div formGroupName="allDocuments"> -->
 
                 <div class="mb-3">
-                    <label for="exampleInputName">PanCard</label>
+                    <label for="exampleInputName">PanCard : </label>
                     <input type="file" (change)="onselectfile1($event)">
                 </div>
                 <div class="mb-3">
-                    <label for="exampleInputName">Income Proof</label>
+                    <label for="exampleInputName">Income Proof : </label>
                     <input type="file" (change)="onselectfile2($event)">
                 </div>
                 <div class="mb-3">
-                    <label for="exampleInputName">Photo</label>
+                    <label for="exampleInputName">Photo : </label>
                     <input type="file" class="file-input" (change)="onselectfile3($event)" #fileUpload>
                 </div>
                 <div class="mb-3">
-                    <label for="exampleInputName">AadharCard</label>
+                    <label for="exampleInputName">AadharCard : </label>
                     <input type="file" class="file-input" (change)="onselectfile4($event)" #fileUpload>
                 </div>
                 <div class="mb-3">
-                    <label for="exampleInputName">Signature</label>
+                    <label for="exampleInputName">Signature : </label>
                     <input type="file" class="file-input" (change)="onselectfile5($event)" #fileUpload>
                 </div>
                 <div class="mb-3">
-                    <label for="exampleInputName">Bank Passbook</label>
+                    <label for="exampleInputName">Bank Passbook : </label>
                     <input type="file" class="file-input" (change)="onselectfile6($event)" #fileUpload>
                 </div>
                 <br><br><br>

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { Customerdetails } from 'src/app/classes/customerdetails';
 import { CommonserviceService } from 'src/app/common/commonservice.service';
 
@@ -8,7 +9,7 @@ import { CommonserviceService } from 'src/app/common/commonservice.service';
   styleUrls: ['./filevarification.component.scss']
 })
 export class FilevarificationComponent {
-  constructor(private cs:CommonserviceService){}
+  constructor(private cs:CommonserviceService,private router:Router){}
 
 customerapplications:Customerdetails[]
   ngOnInit(): void {
@@ -24,12 +25,17 @@ customerapplications:Customerdetails[]
     //  });
   }
    singlecustomer:any;
-  onclicksinglecustomer(id:any){
-        
-    this.cs.getSingleCustomer(id).subscribe((response)=>{
-    this.singlecustomer=response;
-    console.log(this.singlecustomer);
-  })
+   viewDetails(customerdetails:Customerdetails)
+   {
+    // now customerdetails object we need to convert into String with help of Stringify method--
+      let routeCoustome = JSON.stringify(customerdetails);
+      //  localStorage.setItem("customerdetails",);
+      // now we are going to forword then object Data in the form of String Data with router URL----
+        this.router.navigate(["dashboard/operationalexc/viewapplicantform/"+routeCoustome])
+  //   this.cs.getSingleCustomer(id).subscribe((response)=>{
+  //   this.singlecustomer=response;
+  //   console.log(this.singlecustomer);
+  // })
   }
 
 }

@@ -90,4 +90,10 @@ export class CommonserviceService {
   {
     return this.http.get("http://localhost:9091/customer/getsingleCutomer/"+id);
   }
+
+  verifydetails(customerId:number,loanstatus:any)
+  {
+    console.log(loanstatus,customerId);
+    return this.http.put("http://localhost:9091/customer/updateCustomer/"+customerId+"/"+loanstatus+"","putcalled");
+  }
 }

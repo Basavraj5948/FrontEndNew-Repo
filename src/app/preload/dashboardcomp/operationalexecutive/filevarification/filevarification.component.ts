@@ -18,20 +18,17 @@ customerapplications:Customerdetails[]
       console.log(response);
        this.customerapplications=response.responseData;
     });
-    
-    // this.customerapplications.forEach(cst => {
-                   
-    //   console.log(cst)
-    //  });
   }
-   singlecustomer:any;
+  //  singlecustomer:any;
    viewDetails(customerdetails:Customerdetails)
    {
     // now customerdetails object we need to convert into String with help of Stringify method--
-      let routeCoustome = JSON.stringify(customerdetails);
+      // let routeCoustome = JSON.stringify(customerdetails); method 1
       //  localStorage.setItem("customerdetails",);
+
       // now we are going to forword then object Data in the form of String Data with router URL----
-        this.router.navigate(["dashboard/operationalexc/viewapplicantform/"+routeCoustome])
+        this.router.navigate(["./dashboard/operationalexc/viewapplicantform/"],
+        {queryParams:{data:JSON.stringify(customerdetails)}});
   //   this.cs.getSingleCustomer(id).subscribe((response)=>{
   //   this.singlecustomer=response;
   //   console.log(this.singlecustomer);

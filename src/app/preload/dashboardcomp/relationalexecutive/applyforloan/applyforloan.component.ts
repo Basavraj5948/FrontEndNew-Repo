@@ -34,7 +34,7 @@ export class ApplyforloanComponent {
       customerEmail: this.fb.control('', Validators.required),
       customerQualification: this.fb.control('', Validators.required),
       customerCibilScore: this.fb.control(0, Validators.required),
-      customerLoanStatus: this.fb.control('', Validators.required)
+      customerLoanStatus: this.fb.control('')
 
     }),
     customerAddress: this.fb.group({       

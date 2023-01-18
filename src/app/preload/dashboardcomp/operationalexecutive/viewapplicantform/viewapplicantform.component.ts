@@ -14,18 +14,29 @@ export class ViewapplicantformComponent implements OnInit{
  constructor( private activateRouter:ActivatedRoute,private cs:CommonserviceService,private fb:FormBuilder){
 
  }
-
-//  viewdetails:FormGroup; 
  customerdetails:Customerdetails;
  ngOnInit(): void 
  {
   // paramMap method is used to get Data from URL----
-   this.activateRouter.paramMap.subscribe(param=>
-    {
-      // now Data will be came in String format we need to convert it into Object with help of JSON.parse method--
-      this.customerdetails=JSON.parse(param.get('data'));
-    })
-
+  //  this.activateRouter.paramMap.subscribe(param=>   {
+  //     // now Data will be came in String format we need to convert it into Object with help of JSON.parse method--
+  //     this.customerdetails=JSON.parse(param.get('data'));   })
+   this.activateRouter.queryParams.subscribe((params)=>{
+    console.log(params)
+    this.customerdetails=JSON.parse(params['data']);
+   })
  }
+
+ docverified(customerId:number)
+ {
+       let loanstatus="documentverfied"
+    this.cs.verifydetails(customerId,loanstatus).subscribe();
+ }
+ docrejected(customerId:number)
+ {
+  let loanstatus="documentrejected"
+ this.cs.verifydetails(customerId,loanstatus).subscribe();
+ }
+ 
 
 }

@@ -29,6 +29,7 @@ export class ViewapplicantformComponent implements OnInit{
 
  docverified(customerId:number)
  {
+  alert(customerId);
        let loanstatus="documentverfied"
     this.cs.verifydetails(customerId,loanstatus).subscribe();
  }

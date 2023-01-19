@@ -21,7 +21,7 @@ export class CommonserviceService {
   constructor(private http:HttpClient) { }
 
  enquirymodel:Enquirymodel={
-   customerFirstName: '',
+  customerFirstName: '',
    customerLastName: '',
    panCard: '',
    aadharNumber: 0,
@@ -29,7 +29,7 @@ export class CommonserviceService {
    mobileNumber: 0,
    cibilStatus: '',
    cibilScore: 0,
-   enquiryId: 0
+   enquiryId: 0,
  }
 
  customerdetails:Customerdetails={
@@ -81,7 +81,11 @@ export class CommonserviceService {
  {
      return this.http.post(" http://localhost:9091/customer/postCustomer",data);  
  }
- getCustomer()
+ getCustomer(loanstatus:string)
+ {
+  return this.http.get("http://localhost:9091/customer/getCustomer/"+loanstatus+"");
+ }
+ getAllCustomer()
  {
   return this.http.get("http://localhost:9091/customer/getcustomer");
  }
@@ -92,7 +96,6 @@ export class CommonserviceService {
 
   verifydetails(customerId:number,loanstatus:any)
   {
-    console.log(loanstatus,customerId);
-    return this.http.put("http://localhost:9091/customer/updateCustomer/"+customerId+"/"+loanstatus+"","putcalled");
+    return this.http.put("http://localhost:9091/customer/updateCustomer/"+customerId+"",loanstatus);
   }
 }

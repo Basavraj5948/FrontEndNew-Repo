@@ -17,7 +17,7 @@ export class ViewapplicationstatusComponent {
 
   ngOnInit()
   {
-    this.cs.getCustomer().subscribe((response:any)=>{
+    this.cs.getAllCustomer().subscribe((response:any)=>{
         console.log(response.responseData);
        this.customerDetails = response.responseData;
     })

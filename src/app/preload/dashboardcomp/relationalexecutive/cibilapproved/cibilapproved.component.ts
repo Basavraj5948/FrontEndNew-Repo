@@ -47,7 +47,13 @@ export class CibilapprovedComponent {
   }
   fillform(enquiry:Enquirymodel)
   {
-   alert("method get called");
+    Swal.fire({
+      position: 'top',
+      icon: 'success',
+      title: "Please wait !!",
+      showConfirmButton: false,
+      timer: 2000
+    })
    this.router.navigate(["dashboard/relationalexe/applyforloan"]);
 
     

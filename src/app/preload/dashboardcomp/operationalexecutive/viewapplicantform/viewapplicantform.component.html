@@ -1,208 +1,204 @@
 <div class="container pt-4">
-  <div class="card">
-    <div class="card-body">
-      <h1>Personal Details</h1>
-    </div>
-  </div>
-  
+      <h2>Personal Details : </h2>
+
 <div class="row">
   <div class="col">
-    <label>Fist Name:</label>
+    <label>Fist Name :</label>
     <input class="form-control" type="text" value="{{ customerdetails.customerFirstName }}" aria-label="readonly input example" readonly>
    </div>
    <div class="col">
-    <label>Last Name:</label>
+    <label>Last Name :</label>
     <input class="form-control" type="text" value="{{ customerdetails.customerLastName }}" aria-label="readonly input example" readonly>
    </div>
    <div class="col">
-    <label>Middle Name:</label>
+    <label>Middle Name :</label>
     <input class="form-control" type="text" value="{{ customerdetails.customerMiddleName }}" aria-label="readonly input example" readonly>
    </div>
 </div>
 <div class="row mb-5">
   <div class="col">
-    <label>Mobile no:</label>
+    <label>Mobile no :</label>
     <input class="form-control" type="text" value="{{ customerdetails.customerMobileNumber }}" aria-label="readonly input example" readonly>
    </div>
    <div class="col">
-    <label>Alternate Mob No:</label>
+    <label>Alternate Mob No :</label>
     <input class="form-control" type="text" value="{{ customerdetails.customerAdditionalMobileNumber }}" aria-label="readonly input example" readonly>
    </div>
    <div class="col">
-    <label>PAN No:</label>
+    <label>PAN Number :</label>
     <input class="form-control" type="text" value="{{ customerdetails.customerPanCard }}" aria-label="readonly input example" readonly>
    </div>
 </div>
 <div class="row mb-5">
   <div class="col">
-    <label>Aadhar No:</label>
+    <label>Aadhar Number:</label>
     <input class="form-control" type="text" value="{{ customerdetails.customerAadharCard }}" aria-label="readonly input example" readonly>
    </div>
    <div class="col">
-    <label>Bithdate:</label>
+    <label>Date of Birth :</label>
     <input class="form-control" type="text" value="{{ customerdetails.customerDateOfBirth }}" aria-label="readonly input example" readonly>
    </div>
    <div class="col">
-    <label>Email:</label>
+    <label>Email ID :</label>
     <input class="form-control" type="text" value="{{ customerdetails.customerEmail }}" aria-label="readonly input example" readonly>
    </div>
 </div>
 
 <div class="row mb-5">
   <div class="col">
-    <label>Gender:</label>
+    <label>Gender :</label>
     <input class="form-control" type="text" value="{{ customerdetails.customerGender }}" aria-label="readonly input example" readonly>
    </div>
    <div class="col">
-    <label>Qualification</label>
+    <label>Qualification : </label>
     <input class="form-control" type="text" value="{{ customerdetails.customerQualification }}" aria-label="readonly input example" readonly>
    </div>
    <div class="col">
-    <label>CIBIL Score</label>
+    <label>CIBIL Score :</label>
     <input class="form-control" type="text" value="{{ customerdetails.customerCibilScore }}" aria-label="readonly input example" readonly>
    </div>
 </div>
-<h2>Address Details</h2>
-<h4>Local Address</h4>
+<h2>Address Details : </h2>
+<h4 style="font-weight: 600;">Local Address : </h4>
 <div class="row mb-5">
   <div class="col">
-    <label>State</label>
+    <label>State : </label>
     <input class="form-control" type="text" value="{{ customerdetails.customerAddress.localState }}" aria-label="readonly input example" readonly>
    </div>
    <div class="col">
-    <label>District</label>
+    <label>District :</label>
     <input class="form-control" type="text" value="{{ customerdetails.customerAddress.localDistrict }}" aria-label="readonly input example" readonly>
    </div>
    <div class="col">
-    <label>City</label>
+    <label>City : </label>
     <input class="form-control" type="text" value="{{ customerdetails.customerAddress.localCityName }}" aria-label="readonly input example" readonly>
    </div>
 </div>
 
 <div class="row mb-5">
   <div class="col">
-    <label>Area</label>
+    <label>Area : </label>
     <input class="form-control" type="text" value="{{ customerdetails.customerAddress.localAreaName }}" aria-label="readonly input example" readonly>
    </div>
    <div class="col">
-    <label>Street</label>
+    <label>Street :</label>
     <input class="form-control" type="text" value="{{ customerdetails.customerAddress.localStreetName }}" aria-label="readonly input example" readonly>
    </div>
    <div class="col">
-    <label>House No.</label>
+    <label>House Number :</label>
     <input class="form-control" type="text" value="{{ customerdetails.customerAddress.localHouseNumber }}" aria-label="readonly input example" readonly>
    </div>
    <div class="col">
-    <label>Pin</label>
+    <label>Pincode :</label>
     <input class="form-control" type="text" value="{{ customerdetails.customerAddress.localPincode }}" aria-label="readonly input example" readonly>
    </div>
 </div>
-<h4>Permanent Address</h4>
+<h4 style="font-weight: 600;">Permanent Address :</h4>
 <div class="row mb-5">
   <div class="col">
-    <label>State</label>
+    <label>State : </label>
     <input class="form-control" type="text" value="{{ customerdetails.customerAddress.permanentState }}" aria-label="readonly input example" readonly>
    </div>
    <div class="col">
-    <label>District</label>
+    <label>District :</label>
     <input class="form-control" type="text" value="{{ customerdetails.customerAddress.permanentDistrict }}" aria-label="readonly input example" readonly>
    </div>
    <div class="col">
-    <label>City</label>
+    <label>City :</label>
     <input class="form-control" type="text" value="{{ customerdetails.customerAddress.permanentCityName }}" aria-label="readonly input example" readonly>
    </div>
 </div>
 
 <div class="row mb-5">
   <div class="col">
-    <label>Area</label>
+    <label>Area :</label>
     <input class="form-control" type="text" value="{{ customerdetails.customerAddress.permanentAreaName }}" aria-label="readonly input example" readonly>
    </div>
    <div class="col">
-    <label>Street</label>
+    <label>Street :</label>
     <input class="form-control" type="text" value="{{ customerdetails.customerAddress.permanentStreetName }}" aria-label="readonly input example" readonly>
    </div>
    <div class="col">
-    <label>House No.</label>
+    <label>House Number :</label>
     <input class="form-control" type="text" value="{{ customerdetails.customerAddress.permanentHouseNumber }}" aria-label="readonly input example" readonly>
    </div>
    <div class="col">
-    <label>Pin</label>
+    <label>Pincode :</label>
     <input class="form-control" type="text" value="{{ customerdetails.customerAddress.permanentPincode }}" aria-label="readonly input example" readonly>
    </div>
 </div>
-<h2>Profession Details</h2>
+<h2>Profession Details : </h2>
 <div class="row mb-5">
   <div class="col">
-    <label>Type</label>
+    <label>profession Type :</label>
     <input class="form-control" type="text" value="{{ customerdetails.customerProfession.professionType }}" aria-label="readonly input example" readonly>
   </div>
   <div class="col">
-    <label>Monthly Income</label>
+    <label>Monthly Income :</label>
     <input class="form-control" type="text" value="{{ customerdetails.customerProfession.professionMonthlyIncome }}" aria-label="readonly input example" readonly>
   </div>
   <div class="col">
-    <label>Designation</label>
+    <label>Designation :</label>
     <input class="form-control" type="text" value="{{ customerdetails.customerProfession.professionDesignation }}" aria-label="readonly input example" readonly>
   </div>
 </div>
-<h2>Bank Details</h2>
+<h2>Bank Details : </h2>
 <div class="row mb-5">
   <div class="col">
-    <label>Bank Name</label>
+    <label>Bank Name :</label>
     <input class="form-control" type="text" value="{{ customerdetails.customerBankDetails.customerBankName }}" aria-label="readonly input example" readonly>
   </div>
   <div class="col">
-    <label>Branch</label>
+    <label>Branch Name :</label>
     <input class="form-control" type="text" value="{{ customerdetails.customerBankDetails.customerBankBranchName }}" aria-label="readonly input example" readonly>
   </div>
   <div class="col">
-    <label>Account No.</label>
+    <label>Account Number :</label>
     <input class="form-control" type="text" value="{{ customerdetails.customerBankDetails.customerBankAccountNumber }}" aria-label="readonly input example" readonly>
   </div>
   <div class="col">
-    <label>IFSC No.</label>
+    <label>IFSC Number :</label>
     <input class="form-control" type="text" value="{{ customerdetails.customerBankDetails.customerBankIfscNumber }}" aria-label="readonly input example" readonly>
   </div>
 </div>
 
-  <h2>Vehicle And Dealerr Details</h2>
+  <h2>Vehicle Details : </h2>
 <div class="row mb-5">
   <div class="col">
-    <label>Vehicle Model Name</label>
+    <label>Vehicle Model Name :</label>
     <input class="form-control" type="text" value="{{ customerdetails.customerVehicleInformation.customerVehicleModel }}" aria-label="readonly input example" readonly>
   </div>
 </div>
-<h2>Dealer</h2>
+<h2>Dealer Details: </h2>
 <div class="row mb-5">
   <div class="col">
-    <label>Dealer Name</label>
+    <label>Dealer Name :</label>
     <input class="form-control" type="text" value="{{ customerdetails.customerDealer.dealerName }}" aria-label="readonly input example" readonly>
   </div>
   <div class="col">
-    <label>Address</label>
+    <label>Address :</label>
     <input class="form-control" type="text" value="{{ customerdetails.customerDealer.dealerAddress }}" aria-label="readonly input example" readonly>
   </div>
   <div class="col">
-    <label>Bank Name</label>
+    <label>Bank Name :</label>
     <input class="form-control" type="text" value="{{ customerdetails.customerDealer.dealerBankName }}" aria-label="readonly input example" readonly>
   </div>
 </div>
 <div class="row mb-5">
   <div class="col">
-    <label>Account No</label>
+    <label>Account Number :</label>
     <input class="form-control" type="text" value="{{ customerdetails.customerDealer.dealerBankAccountNumber }}" aria-label="readonly input example" readonly>
   </div>
   <div class="col">
-    <label>Branch:</label>
+    <label>Branch Name :</label>
     <input class="form-control" type="text" value="{{ customerdetails.customerDealer.dealerBankBranchName }}" aria-label="readonly input example" readonly>
   </div>
   <div class="col">
-    <label>IFSC No.</label>
+    <label>IFSC Number :</label>
     <input class="form-control" type="text" value="{{ customerdetails.customerDealer.dealerBankIfscNumber }}" aria-label="readonly input example" readonly>
   </div>
 </div>
-<h2>Documents</h2>
+<h2>Documents : </h2>
 <div class="row mb-5">
   <div class="col">
     <!-- <label>Pancard</label> -->
@@ -211,38 +207,38 @@
     
   </div>  
   <div class="col">
-    <label>AadharCard</label>
+    <label>AadharCard :</label>
     <!-- <input class="form-control" type="text" value="{{ customerdetails.customerAllDocuments.aadharCard }}" aria-label="readonly input example" readonly> -->
     <img [src]="'data:image/jpeg;base64,'+customerdetails.customerAllDocuments.aadharCard">
   </div>
   <div class="col">
-    <label>Income Proof</label>
+    <label>Income Proof :</label>
     <!-- <input class="form-control" type="text" value="{{ customerdetails.customerAllDocuments.incomeProof }}" aria-label="readonly input example" readonly> -->
     <img [src]="'data:image/jpeg;base64,'+customerdetails.customerAllDocuments.incomeProof" width="260" height="180">
   </div>
   </div>
   <div class="row mb-5">
     <div class="col">
-      <label>Photo</label>
+      <label>Photo :</label>
       <!-- <input class="form-control" type="text" value="{{ customerdetails.customerAllDocuments.photo }}" aria-label="readonly input example" readonly> -->
       <img [src]="'data:image/jpeg;base64,'+customerdetails.customerAllDocuments.photo" width="260" height="180">
       
     </div>
     <div class="col">
-      <label>Signature</label>
+      <label>Signature :</label>
       <!-- <input class="form-control" type="text" value="{{ customerdetails.customerAllDocuments.signature }}" aria-label="readonly input example" readonly> -->
       <img [src]="'data:image/jpeg;base64,'+customerdetails.customerAllDocuments.signature" width="260" height="180">
     </div>
     <div class="col">
-      <label>Bank Passbook</label>
+      <label>Bank Passbook :</label>
       <!-- <input class="form-control" type="text" value="{{ customerdetails.customerAllDocuments.bankPassBook }}" aria-label="readonly input example" readonly> -->
       <img [src]="'data:image/jpeg;base64,'+customerdetails.customerAllDocuments.bankPassBook" width="260" height="180">
     </div>
     </div>
   
     <div>
-   <button class="btn btn-success" type="button" (click)="docverified(customerdetails.customerId)">Verified</button>
-   <button class="btn btn-danger" type="button" (click)="docrejected(customerdetails.customerId)">Rejected</button>
+   <button style="margin-left: 20px;"class="btn btn-success" type="button" (click)="docverified(customerdetails.customerId)">Verify</button>
+   <button style="margin-left: 30px;" class="btn btn-danger" type="button" (click)="docrejected(customerdetails.customerId)">Reject</button>
 
     </div>
 

@@ -17,6 +17,7 @@ export class RegistercompComponent {
   ngOnInit()
   {
     this.enquiry=this.fb.group({
+      enuiryId:[this.cs.enquirymodel.enquiryId],
       customerFirstName:[this.cs.enquirymodel.customerFirstName,[Validators.required]],
       customerLastName:[this.cs.enquirymodel.customerLastName,[Validators.required]],
       panCard:[this.cs.enquirymodel.panCard,[Validators.required]],
@@ -83,7 +84,7 @@ export class RegistercompComponent {
         )
       }
     })
-
+    this.cs.enquirymodel.enquiryId=this.enquiry.get('enuiryId').value;
     this.cs.enquirymodel.customerFirstName=this.enquiry.get('customerFirstName').value;
     this.cs.enquirymodel.customerLastName=this.enquiry.get('customerLastName').value;
     this.cs.enquirymodel.panCard=this.enquiry.get('panCard').value;

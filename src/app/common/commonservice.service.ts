@@ -17,6 +17,7 @@ import { SanctionLetter } from '../classes/sanction-letter';
   providedIn: 'root'
 })
 export class CommonserviceService {
+  
 
   constructor(private http:HttpClient) { }
 
@@ -97,5 +98,10 @@ export class CommonserviceService {
   verifydetails(customerId:number,loanstatus:any)
   {
     return this.http.put("http://localhost:9091/customer/updateCustomer/"+customerId+"",loanstatus);
+  }
+
+  getDocVerifiedApp(loanstatus: string) 
+  {
+    return this.http.get("http://localhost:9091/sanction/getCustomer/"+loanstatus+"");
   }
 }

@@ -15,9 +15,8 @@ export class Menu {
                 
               ],
              creditmanager:[
-                {key:"verifydetails",label:"Verify Details"},
-                {key:"notificationsend",label:"Notification send to OE"},
-                {key:"transfertoAH",label:"Transfer to Account Head"},
+                {key:"viewverifiedalpplications",label:"View Verified Applications"},
+               
               ],
             accounthead:[
                 {key:"disbursment",label:"Disbursment"},

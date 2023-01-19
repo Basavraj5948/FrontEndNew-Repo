@@ -1,0 +1,24 @@
+
+<table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th  style="font-weight: 900;color: rgb(0, 238, 255);"scope="col">Customer ID</th>
+        <th  style="font-weight: 900;color: rgb(0, 251, 255);"scope="col">Customer First Name</th>
+        <th  style="font-weight: 900;color: rgb(0, 234, 255);"scope="col">Customer Last Name</th>
+         <th  style="font-weight: 900;color: rgb(0, 221, 255);"scope="col">CIBIL Score</th>
+         <th  style="font-weight: 900;color: rgb(0, 221, 255);"scope="col">Loan Status</th>
+         <th  style="font-weight: 900;color: rgb(0, 221, 255);"scope="col">Generate SanctionLetter</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let verifiedappl of verifiedapplications">
+        <th scope="row">{{verifiedappl.customerId}}</th>
+        <td>{{verifiedappl.customerFirstName}}</td>
+        <td>{{verifiedappl.customerLastName}}</td>
+        <td>{{verifiedappl.customerCibilScore}}</td>
+        <td>{{verifiedappl.customerLoanStatus}}</td>
+        <td><button style="background-color: rgb(174, 106, 237);color: white;border-radius: 10px;padding: 3px;padding-left: 5px;padding-right: 5px;" (click)="createsanctionletter(verifiedappl)">Sanction Letter</button> </td>
+      </tr>
+    </tbody>
+  </table>
+   

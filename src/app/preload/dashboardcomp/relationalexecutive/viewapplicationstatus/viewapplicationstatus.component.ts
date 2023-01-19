@@ -21,6 +21,5 @@ export class ViewapplicationstatusComponent {
         console.log(response.responseData);
        this.customerDetails = response.responseData;
     })
-  
   }
 }

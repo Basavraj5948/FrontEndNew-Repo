@@ -18,12 +18,12 @@ export class ViewverifiedapplicationsComponent {
       this.verifiedapplications=response.responseData;
     });
   }
-
+  
   createsanctionletter(verifiedcustomerdetails:Customerdetails)
   {
-    alert("method called");
-    let singleVerifiedData = JSON.stringify(verifiedcustomerdetails);
-    this.router.navigate(["/dashboard/creditmanager/generatesanctionletter/"+singleVerifiedData]);
+   
+    this.router.navigate(["./dashboard/creditmanager/generatesanctionletter/"],
+        {queryParams:{data:JSON.stringify(verifiedcustomerdetails)}});
   }
 
 

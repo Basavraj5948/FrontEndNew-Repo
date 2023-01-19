@@ -9,4 +9,5 @@ export class SanctionLetter {
 	monthlyEmiAmount:number;
 	termsAndCondition:string;
 	sanctionStatus:string;
+	sanctionLetter:any[];
 }

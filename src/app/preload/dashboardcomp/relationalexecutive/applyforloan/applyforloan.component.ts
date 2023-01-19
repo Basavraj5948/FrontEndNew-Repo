@@ -277,10 +277,5 @@ goForward(stepper: MatStepper){
       })
     });
   }
-  // panCard: any;
-  // incomeProof: any;
-  // photo: any;
-  // signature: any;
-  // aadharCard: any;
-  // bankPassBook: any;
+ 
 }

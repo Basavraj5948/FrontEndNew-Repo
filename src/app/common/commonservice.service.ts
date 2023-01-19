@@ -104,4 +104,9 @@ export class CommonserviceService {
   {
     return this.http.get("http://localhost:9091/sanction/getCustomer/"+loanstatus+"");
   }
+
+  generateSanction(customerId:number,data:any)
+  {
+    return this.http.put("http://localhost:9091/sanction/updateCustomer/"+customerId,data);
+  }
 }

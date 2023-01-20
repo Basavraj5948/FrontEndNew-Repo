@@ -18,6 +18,7 @@ import { SanctionLetter } from '../classes/sanction-letter';
 })
 export class CommonserviceService {
   
+  
 
   constructor(private http:HttpClient) { }
 
@@ -71,6 +72,17 @@ export class CommonserviceService {
    sanctionLetter: []
  }
 
+ loandisbursement:LoanDisbursement={
+   agreementId: 0,
+   totalLoanSanctionedAmount: 0,
+   transferedAmount: 0,
+   amountPaidDate: '',
+   paymentStatus: '',
+   dealerBankAccountNumber: 0,
+   dealerBankName: '',
+   dealerBankIfscNumber: ''
+ }
+
  PostEnquiry()
  {
   return this.http.post("http://localhost:9091/Enquiry/postEnquiry",this.enquirymodel);
@@ -119,6 +131,16 @@ export class CommonserviceService {
   generateSanction(customerId:number)
   {
     return this.http.put("http://localhost:9091/sanction/generatePdf/"+customerId+"",this.santionletter);
+  }
+
+  sanctionStatus(loanStatus:string,customerId:number)
+  {
+    return this.http.put("http://localhost:9091/sanction/sanctionUpdate/"+customerId+"",loanStatus);
+  }
+
+  disburseloan(customerId:number) {
+   
+    return this.http.put("http://localhost:9091/LoanDisbursement/loanDisbursementupdate/"+customerId+"",this.loandisbursement);
   }
 }
  

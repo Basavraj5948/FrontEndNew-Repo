@@ -8,7 +8,10 @@
         <th  style="font-weight: 900;color: rgb(0, 251, 255);"scope="col">Customer Middle Name</th>
         <th  style="font-weight: 900;color: rgb(0, 234, 255);"scope="col">Customer Last Name</th>
         <th  style="font-weight: 900;color: rgb(0, 221, 255);"scope="col">Loan Status</th>
-        <th  style="font-weight: 900;color: rgb(0, 221, 255);"scope="col">Action</th>
+        <!-- <div *ngIf="showme" class="showme"> -->
+        <th  style="font-weight: 900;color: rgb(0, 221, 255);"scope="col">View Sanction Letter</th>
+        <th  style="font-weight: 900;color: rgb(0, 221, 255);"scope="col">Send Mail</th>
+      <!-- </div> -->
         <!-- <th  style="font-weight: 900;color: rgb(0, 221, 255);"scope="col">CIBIL Score</th>
         
         <th  style="font-weight: 900;color: rgb(0, 221, 255);"scope="col">Check CIBIL</th>
@@ -24,8 +27,9 @@
         <th scope="row">{{customer.customerMiddleName}}</th>
         <th scope="row">{{customer.customerLastName}}</th>
         <th scope="row">{{customer.customerLoanStatus}}</th>
-        <th scope="row"></th>
-        
+     
+        <th *ngIf="customer.customerLoanStatus==='SanctionLetterGenerated'" scope="row"><button style="background-color: rgb(174, 106, 237);color: white;border-radius: 10px;padding: 3px;padding-left: 5px;padding-right: 5px;" (click)="viewSanctionLetter(customer)">View Sanction Letter</button></th>
+        <th *ngIf="customer.customerLoanStatus==='SanctionLetterGenerated'" scope="row"><button style="background-color: rgb(174, 106, 237);color: white;border-radius: 10px;padding: 3px;padding-left: 5px;padding-right: 5px;" (click)="viewSanctionLetter(customer)">Send Sanction Letter</button></th>
         <!-- <td><button style="background-color: rgb(174, 106, 237);color: white;border-radius: 10px;padding: 3px;padding-left: 5px;padding-right: 5px;" (click)="sendMail(data)">Send Mail</button> </td>
         <td><button style="background-color: rgb(174, 106, 237);color: white;border-radius: 10px;padding: 3px;padding-left: 5px;padding-right: 5px;" (click)="fillform(data)">Apply for Loan</button> </td> -->
       </tr>

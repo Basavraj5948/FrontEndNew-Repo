@@ -19,8 +19,7 @@ export class Menu {
                
               ],
             accounthead:[
-                {key:"disbursment",label:"Disbursment"},
-                {key:"ledgerprocess",label:"Ledger Process"},
+                {key:"viewapprovedsanctionletters",label:"View Approved San.Letters"},
              ]                            
         }]
 }

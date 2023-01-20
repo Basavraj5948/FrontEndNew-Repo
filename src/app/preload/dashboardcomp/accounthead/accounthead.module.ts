@@ -2,22 +2,23 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { AccountheadRoutingModule } from './accounthead-routing.module';
-import { DisbursmentcompComponent } from './disbursmentcomp/disbursmentcomp.component';
-import { LedgerprocesscompComponent } from './ledgerprocesscomp/ledgerprocesscomp.component';
+import { ViewapprovedsanctionletterComponent } from './viewapprovedsanctionletter/viewapprovedsanctionletter.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { LoandisbursementcompComponent } from './loandisbursementcomp/loandisbursementcomp.component';
 
 
 @NgModule({
   declarations: [
-    DisbursmentcompComponent,
-    LedgerprocesscompComponent
+    ViewapprovedsanctionletterComponent,
+    LoandisbursementcompComponent
   ],
   imports: [
     CommonModule,
-    AccountheadRoutingModule
+    AccountheadRoutingModule,ReactiveFormsModule
   ],
   exports:[
-    DisbursmentcompComponent,
-    LedgerprocesscompComponent
+    ViewapprovedsanctionletterComponent,
+    LoandisbursementcompComponent
   ]
 })
 export class AccountheadModule { }

@@ -5,9 +5,9 @@ import { ContactcompComponent } from './contactcomp/contactcomp.component';
 import { AccountheadModule } from './dashboardcomp/accounthead/accounthead.module';
 import { CreditmanagerModule } from './dashboardcomp/creditmanager/creditmanager.module';
 import { DashboardcompComponent } from './dashboardcomp/dashboardcomp.component';
-import { OperationalexecutiveRoutingModule } from './dashboardcomp/operationalexecutive/operationalexecutive-routing.module';
+
 import { OperationalexecutiveModule } from './dashboardcomp/operationalexecutive/operationalexecutive.module';
-import { ApplyforloanComponent } from './dashboardcomp/relationalexecutive/applyforloan/applyforloan.component';
+
 import { RelationalexecutiveModule } from './dashboardcomp/relationalexecutive/relationalexecutive.module';
 import { DefaultcompComponent } from './defaultcomp/defaultcomp.component';
 import { EmicalculatorcompComponent } from './emicalculatorcomp/emicalculatorcomp.component';

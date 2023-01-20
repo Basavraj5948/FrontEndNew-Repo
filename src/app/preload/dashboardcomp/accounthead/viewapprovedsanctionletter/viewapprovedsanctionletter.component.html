@@ -1,0 +1,27 @@
+<table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th  style="font-weight: 900;color: rgb(0, 238, 255);"scope="col">Customer ID</th>
+        <th  style="font-weight: 900;color: rgb(0, 251, 255);"scope="col">Customer First Name</th>
+        <th  style="font-weight: 900;color: rgb(0, 234, 255);"scope="col">Customer Last Name</th>
+         <th  style="font-weight: 900;color: rgb(0, 221, 255);"scope="col">CIBIL Score</th>
+         <th  style="font-weight: 900;color: rgb(0, 221, 255);"scope="col">ROI(%)</th>
+         <th  style="font-weight: 900;color: rgb(0, 221, 255);"scope="col">Tenure</th>
+         <th  style="font-weight: 900;color: rgb(0, 221, 255);"scope="col">Sanctioned Amount</th>
+         <th  style="font-weight: 900;color: rgb(0, 221, 255);"scope="col">Disbursement</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let sanctapprovcustomer of sanctionedapprovedcustomers">
+        <th scope="row">{{sanctapprovcustomer.customerId}}</th>
+        <td>{{sanctapprovcustomer.customerFirstName}}</td>
+        <td>{{sanctapprovcustomer.customerLastName}}</td>
+        <td>{{sanctapprovcustomer.customerCibilScore}}</td>
+        <td>{{sanctapprovcustomer.customerSanctionLetter.rateOfInterest}}</td>
+        <td>{{sanctapprovcustomer.customerSanctionLetter.loanTenure}}</td>
+        <td>{{sanctapprovcustomer.customerSanctionLetter.loanAmountSanctioned}}</td>
+        <td><button style="background-color: rgb(174, 106, 237);color: white;border-radius: 10px;padding: 3px;padding-left: 5px;padding-right: 5px;" (click)="disburseloan(sanctapprovcustomer)">Disburse Loan</button> </td>
+      </tr>
+    </tbody>
+  </table>
+

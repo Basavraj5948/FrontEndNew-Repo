@@ -1,0 +1,136 @@
+
+<section class="h-100 h-custom gradient-custom-2 ">
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-12">
+                <div class="card card-registration card-registration-2" style="border-radius: 15px;">
+                    <div class="card-body p-0">
+                        <div class="glowBox">
+                            <h4 class="title" style="font-size: 30px;margin-left: 460px;margin-top: 15px;font-weight: 900;color: rgb(57, 50, 50);">
+                                Sanction Letter !!</h4>
+                        </div>
+                        <div class="row g-0">
+
+                            <div class="col bg-indigo text-white">
+                                <div class="p-5">
+                                
+                                        <div class="row" style="border: black;">
+                                            <div class="col">
+                                                <div class="row" style="padding: 10px;">
+                                                    <div class="col-md-9 mb-4 pb-4">
+
+                                                        <div class="form-outline" style="padding: 15px;">
+                                                            <label class="form-label" for="form3Examplev2"
+                                                                style="color: black;">Customer ID :</label>
+                                                            <input type="text" id="form3Examplev2"
+                                                                value="{{customerdetails.customerId}}"
+                                                                class="form-control form-control-lg" readonly />
+                                                        </div> 
+
+                                                        <div class="form-outline" style="padding: 15px;">
+                                                            <label class="form-label" for="form3Examplev2"
+                                                                style="color: black;">Customer First Name : </label>
+                                                            <input type="text" id="form3Examplev2"
+                                                             value="{{customerdetails.customerFirstName}}"
+                                                                class="form-control form-control-lg" readonly  />
+                                                        </div>
+
+                                                        <div class="form-outline" style="padding: 15px;">
+                                                            <label class="form-label" for="form3Examplev2"
+                                                                style="color: black;">Customer Middle Name : </label>
+                                                            <input type="text" id="form3Examplev2"
+                                                             value="{{customerdetails.customerMiddleName}}"
+                                                                class="form-control form-control-lg" readonly  />
+                                                        </div>
+                                                       
+                                                        <div class="form-outline" style="padding: 15px;">
+                                                            <label class="form-label" for="form3Examplev2"
+                                                                style="color: black;">Customer Last Name : </label>
+                                                            <input type="text" id="form3Examplev2"
+                                                             value="{{customerdetails.customerLastName}}"
+                                                                class="form-control form-control-lg" readonly  />
+                                                        </div>
+                                                       
+                                                        <div class="form-outline" style="padding: 15px;">
+                                                            <label class="form-label" for="form3Examplev2"
+                                                                style="color: black;">Terms and Conditions : </label>
+                                                            <input type="text" id="form3Examplev2"
+                                                             value="{{customerdetails.customerSanctionLetter.termsAndCondition}}"
+                                                                class="form-control form-control-lg" readonly  />
+                                                        </div>
+
+                                                       
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div class="col">
+                                                <div class="row" style="padding: 10px;">
+                                                    <div class="col-md-9 mb-4 pb-4">
+
+                                                        <div class="form-outline" style="padding: 15px;">
+                                                            <label class="form-label" for="form3Examplev2"
+                                                                style="color: black;">Loan Sanctioned Data : </label>
+                                                            <input type="text" id="form3Examplev2"
+                                                             value="{{customerdetails.customerSanctionLetter.sanctionDate}}"
+                                                                class="form-control form-control-lg" readonly  />
+                                                        </div>
+
+                                                        <div class="form-outline" style="padding: 15px;">
+                                                            <label class="form-label" for="form3Examplev2"
+                                                                style="color: black;">Rate Of Interest : </label>
+                                                            <input type="text" id="form3Examplev2"
+                                                             value="{{customerdetails.customerSanctionLetter.rateOfInterest}}"
+                                                                class="form-control form-control-lg" readonly  />
+                                                        </div>
+
+                                                        <div class="form-outline" style="padding: 15px;">
+                                                            <label class="form-label" for="form3Examplev2"
+                                                                style="color: black;">Monthly EMI : </label>
+                                                            <input type="text" id="form3Examplev2"
+                                                             value="{{customerdetails.customerSanctionLetter.monthlyEmiAmount}}"
+                                                                class="form-control form-control-lg" readonly  />
+                                                        </div>
+
+                                                        <div class="form-outline" style="padding: 15px;">
+                                                            <label class="form-label" for="form3Examplev2"
+                                                                style="color: black;">Loan Amount Sanctioned : </label>
+                                                            <input type="text" id="form3Examplev2"
+                                                             value="{{customerdetails.customerSanctionLetter.loanAmountSanctioned}}"
+                                                                class="form-control form-control-lg" readonly  />
+                                                        </div>
+
+                                                        <div class="form-outline" style="padding: 15px;">
+                                                            <label class="form-label" for="form3Examplev2"
+                                                                style="color: black;">Loan Tenure (in Months) : </label>
+                                                            <input type="text" id="form3Examplev2"
+                                                             value="{{customerdetails.customerSanctionLetter.loanTenure}}"
+                                                                class="form-control form-control-lg" readonly  />
+                                                        </div>
+
+                                                        
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <button style="margin-left: 20px;" class="btn btn-success"
+                                          (click)="approveSanctionLetter()"
+                                            type="button">Accept San. Letter</button>
+                                            <button style="margin-left: 20px;" class="btn btn-danger"
+                                            (click)="rejectSanctionLetter()"
+                                            type="button">Reject San. Letter</button>                                            
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>

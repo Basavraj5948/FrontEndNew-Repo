@@ -8,6 +8,7 @@ import { CibilrejectedComponent } from './cibilrejected/cibilrejected.component'
 import { EnquiryComponent } from './enquiry/enquiry.component';
 import { RegisterenquiryComponent } from './registerenquiry/registerenquiry.component';
 import { ViewapplicationstatusComponent } from './viewapplicationstatus/viewapplicationstatus.component';
+import { ViewsanctionletterComponent } from './viewsanctionletter/viewsanctionletter.component';
 
 const routes: Routes = [
   {path:"enquiry",component:EnquiryComponent},
@@ -16,6 +17,8 @@ const routes: Routes = [
   {path:"cibilrejected",component:CibilrejectedComponent},
   {path:"applyforloan",component:ApplyforloanComponent},
   {path:"viewappstatus",component:ViewapplicationstatusComponent},
+  {path:"viewsanctionletter",component:ViewsanctionletterComponent},
+  {path:"viewsanctionletter/:data",component:ViewsanctionletterComponent},
   
 ];
 

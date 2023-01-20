@@ -1,11 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { DisbursmentcompComponent } from './disbursmentcomp/disbursmentcomp.component';
-import { LedgerprocesscompComponent } from './ledgerprocesscomp/ledgerprocesscomp.component';
+import { LoandisbursementcompComponent } from './loandisbursementcomp/loandisbursementcomp.component';
+import { ViewapprovedsanctionletterComponent } from './viewapprovedsanctionletter/viewapprovedsanctionletter.component';
+
 
 const routes: Routes = [
-  {path:"disbursment",component:DisbursmentcompComponent},
-  {path:"ledgerprocess",component:LedgerprocesscompComponent},
+  {path:"viewapprovedsanctionletters",component:ViewapprovedsanctionletterComponent},
+  {path:"loandisbursementcomp",component:LoandisbursementcompComponent},
+  {path:"loandisbursementcomp/:data",component:LoandisbursementcompComponent}
 ];
 
 @NgModule({

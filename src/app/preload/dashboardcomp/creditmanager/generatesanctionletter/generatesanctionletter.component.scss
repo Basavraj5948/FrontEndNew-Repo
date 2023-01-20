@@ -22,3 +22,34 @@
 h3{
 	font-size: x-large;
 }
+p{
+	font-family:  sans-serif;
+	font-weight: 900;
+}
+.emi-check{
+    width: 300px;
+    .container{
+        background-color: #ce9ffc;
+    border: black 2px;
+	height: 100%;
+    }
+    .button{
+        background-color: brown;
+        color: #fff;
+		font-size: larger;
+		font-weight: inherit;
+		border-radius: 8px;
+		margin-top: 10px;
+		margin-bottom: 10px;
+}   }
+.customer-details{
+	
+	.container{
+		margin-top: 0px;
+		background-color: #ce9ffc;	
+		height: 100%;
+	}
+}
+label{
+	margin-bottom: -5px;
+}

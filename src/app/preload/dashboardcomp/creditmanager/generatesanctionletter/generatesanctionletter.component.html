@@ -1,5 +1,100 @@
+<div class="container pt-3 mb-5">
+    <div class="row">
+        <div class="col-4">
+            <div class="emi-check">
+                <p>EMI CHECK</p>
+                <div class="container">
+                    <form class="example-form" [formGroup]="emicheckform" (ngSubmit)="emicheck()">
+                        <div class="form-outline">
+                            <label class="form-label" for="form3Examplev2" style="color: black;">Loan Amount:</label>
+                            <input type="number" id="form3Examplev2" formControlName="loanAmount"
+                                class="form-control form-control-lg" />
+                        </div>
 
-<section class="h-100 h-custom gradient-custom-2">
+                        <div class="form-outline">
+                            <label class="form-label" for="form3Examplev2" style="color: black;">Rate Of
+                                Interest:</label>
+                            <input type="number" id="form3Examplev2" formControlName="rateOfInterest"
+                                class="form-control form-control-lg" />
+                        </div>
+                        <div class="form-outline">
+                            <label class="form-label" for="form3Examplev2" style="color: black;">Tenure
+                                (Months):</label>
+                            <input type="number" id="form3Examplev2" formControlName="Tenure"
+                                class="form-control form-control-lg" />
+                        </div>
+
+                        <div class="col-md-6">
+                            <button class="button" type="submit">Check EMI</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-8">
+            <div class="customer-details">
+                <p>CUSTOMER DETAILS</p>
+                <div class="container">
+                
+                <div class="row">
+                    <div class="col">
+                        <label class="form-label" for="form3Examplev2" style="color: black;">Customer Id:</label>
+                        <input type="text" class="form-control form-control-lg" value="{{customerdetails.customerId}}"
+                            aria-label="readonly input example" readonly />
+                    </div>
+                    <div class="col">
+                    <label class="form-label" for="form3Examplev2">Applicant First Name:</label>
+                    <input type="text" id="form3Examplev2" value={{customerdetails.customerFirstName}} class="form-control form-control-lg" readonly />
+                    </div>
+                    <div class="col">
+                    <label class="form-label" for="form3Examplev2">Applicant's Last Name:</label>
+                    <input type="text" id="form3Examplev2" value={{customerdetails.customerLastName}} class="form-control form-control-lg" readonly />
+                   </div>
+                </div>
+                <div class="row">
+
+                    <div class="col">
+                        <label class="form-label" for="form3Examplev4">CIBIL Score:</label>
+                        <input type="text" id="form3Examplev4" value={{customerdetails.customerCibilScore}} class="form-control form-control-lg" readonly />
+                        </div>
+
+
+                    <div class="col">
+                        <label class="form-label" for="form3Examplev2" style="color: black;">Annual Income:</label>
+                        <input type="text" class="form-control form-control-lg"
+                            value="{{customerdetails.customerProfession.professionMonthlyIncome*12}}"
+                            aria-label="readonly input example" readonly />
+                    </div>
+                    <div class="col">
+                        <label class="form-label" for="form3Examplev2" style="color: black;">Qualifying Amount:</label>
+                        <input type="text" class="form-control form-control-lg"
+                            value="{{customerdetails.customerProfession.professionMonthlyIncome*30}}"
+                            aria-label="readonly input example" readonly />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label class="form-label" for="form3Examplev2" style="color: black;">EMI:</label>
+                        <input type="text" class="form-control form-control-lg mb-6" value="{{emi | currency : 'INR'}}"
+                            aria-label="readonly input example" readonly />
+                    </div>
+
+                    <div class="col">
+                        <label class="form-label" for="form3Examplev2" style="color: black;">Payable Amount:</label>
+                        <input type="text" class="form-control form-control-lg"
+                            value="{{totalRepayment | currency : 'INR'}}" aria-label="readonly input example"
+                            readonly />
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
+
+
+<section class="h-100 h-custom gradient-custom-2 ">
     <div class="container py-5 h-100">
         <div class="row d-flex justify-content-center align-items-center h-100">
             <div class="col-12">
@@ -10,58 +105,15 @@
                                 Sanction Letter here !!</h4>
                         </div>
                         <div class="row g-0">
-                            <div class="col-lg-4">
-                                <div class="p-3">
 
-                                    <h3   class="fw-normal mb-5" style="color: #4835d4;font-size: x-large;">General Infomation</h3>
-
-                                    <div class="row">
-                                        <div class="col-md-6 mb-4 pb-0">
-                                            <label class="form-label" for="form3Examplev2">Customer Id:</label>
-                                            <div class="form-outline">
-                                                <input type="text" id="form3Examplev2"
-                                                    value={{customerdetails.customerId}}
-                                                    class="form-control form-control-lg" readonly />
-                                            </div>
-
-                                            <div class="form-outline">
-                                                <label class="form-label" for="form3Examplev2">First Name:</label>
-                                                <input type="text" id="form3Examplev2"
-                                                    value={{customerdetails.customerFirstName}}
-                                                    class="form-control form-control-lg" readonly />
-                                            </div>
-
-                                            <div class="form-outline">
-                                                <label class="form-label" for="form3Examplev2">Last Name:</label>
-                                                <input type="text" id="form3Examplev2"
-                                                    value={{customerdetails.customerLastName}}
-                                                    class="form-control form-control-lg" readonly />
-                                            </div>
-
-                                            <!-- <div class="form-outline">
-                                                <label class="form-label" for="form3Examplev4">Email Id</label>
-                                                <input type="text" id="form3Examplev4"
-                                                    value={{customerdetails.customerEmail}}
-                                                    class="form-control form-control-lg" readonly />
-                                            </div> -->
-
-                                            <div class="form-outline">
-                                                <label class="form-label" for="form3Examplev4">CIBIL Score:</label>
-                                                <input type="text" id="form3Examplev4"
-                                                    value={{customerdetails.customerCibilScore}}
-                                                    class="form-control form-control-lg" readonly />
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                             <div class="col bg-indigo text-white">
                                 <div class="p-3">
 
-                                    <h3 class="fw-normal mb-5" style="color: #4835d4;font-size: x-large;">Sanction Letter</h3>
-                                    <!-- <form [formGroup]="sanctionletterform" (ngSubmit)="generateSanction(customerdetails)"> -->
-                                           <form [formGroup]="sanctionletterform" (ngSubmit)="generateSanction()">
-                                        <div class="row">
+                                    <h3 class="fw-normal mb-5" style="color:  black;;font-size: x-large;">Sanction
+                                        Letter</h3>
+                                    <form [formGroup]="sanctionletterform"
+                                        (ngSubmit)="generateSanction()">
+                                        <div class="row" style="border: black;">
                                             <div class="col">
                                                 <div class="row">
                                                     <div class="col-md-9 mb-4 pb-4">
@@ -77,19 +129,11 @@
                                                         <div class="form-outline">
                                                             <label class="form-label" for="form3Examplev2"
                                                                 style="color: black;">Applicant Name:</label>
-                                                            <input type="text" id="form3Examplev2"
-                                                                formControlName="applicantName"
-                                                                class="form-control form-control-lg" />
+                                                            <input type="text" id="form3Examplev2" value="{{customerdetails.customerFirstName}}"
+                                                                class="form-control form-control-lg"  />
                                                         </div>
 
-                                                        <div class="form-outline">
-                                                            <label class="form-label" for="form3Examplev2"
-                                                                style="color: black;">Contact Details:</label>
-                                                            <input type="text" id="form3Examplev2"
-                                                                formControlName="contactDetails"
-                                                                class="form-control form-control-lg" />
-                                                        </div>
-
+                                                       
                                                         <div class="form-outline">
                                                             <label class="form-label" for="form3Examplev2"
                                                                 style="color: black;">Amount Sanctioned:</label>
@@ -118,14 +162,14 @@
                                                             <input type="number" id="form3Examplev2"
                                                                 formControlName="loanTenure"
                                                                 class="form-control form-control-lg" />
-                                                            
+
                                                         </div>
 
                                                         <div class="form-outline">
                                                             <label class="form-label" for="form3Examplev2"
-                                                            style="color: black;">Monthly EMI:</label>
+                                                                style="color: black;">Monthly EMI:</label>
                                                             <input type="number" id="form3Examplev2"
-                                                                formControlName="monthlyEmiAmount"
+                                                            value="{{emi | currency : 'INR'}}"
                                                                 class="form-control form-control-lg" />
                                                         </div>
 
@@ -136,22 +180,15 @@
                                                                 formControlName="termsAndCondition"
                                                                 class="form-control form-control-lg" />
                                                         </div>
-                                                        <div class="form-outline">
-                                                            <label class="form-label" for="form3Examplev2"
-                                                            style="color: black;">Sanction Status</label>
-                                                            <input type="text" id="form3Examplev2"
-                                                                formControlName="sanctionStatus"
-                                                                class="form-control form-control-lg" />
-
-                                                        </div>
-                                                       
+                                                        
 
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
 
-                                        <button style="margin-left: 20px;"class="btn btn-success" type="submit" >Generate Sanction</button>
+                                        <button style="margin-left: 20px;" class="btn btn-success"
+                                            type="submit">Generate Sanction</button>
                                     </form>
                                 </div>
 

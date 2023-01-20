@@ -62,13 +62,13 @@ export class CommonserviceService {
    sanctionId: 0,
    sanctionDate: '',
    applicantName: '',
-   contactDetails: '',
+  
    loanAmountSanctioned: 0,
    rateOfInterest: 0,
    loanTenure: 0,
    monthlyEmiAmount: 0,
    termsAndCondition: '',
-   sanctionStatus: '',
+   
    sanctionLetter: []
  }
 

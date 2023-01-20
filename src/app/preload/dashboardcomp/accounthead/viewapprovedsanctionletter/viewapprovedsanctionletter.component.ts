@@ -14,7 +14,7 @@ export class ViewapprovedsanctionletterComponent {
   sanctionedapprovedcustomers:Customerdetails;
   
     ngOnInit(): void {
-      this.cs.getDocVerifiedApp('SanctionLetterApproved').subscribe((response:any)=>{
+      this.cs.getsanctionapprovedAppl('SanctionLetterApproved').subscribe((response:any)=>{
         this.sanctionedapprovedcustomers=response.responseData;
       });
     }

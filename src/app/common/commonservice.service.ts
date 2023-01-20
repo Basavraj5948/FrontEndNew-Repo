@@ -138,6 +138,11 @@ export class CommonserviceService {
     return this.http.put("http://localhost:9091/sanction/sanctionUpdate/"+customerId+"",loanStatus);
   }
 
+  getsanctionapprovedAppl(loanstatus:string)
+  {
+    return this.http.get("http://localhost:9091/sanction/sanctionLetterStatus/"+loanstatus);
+  }
+
   disburseloan(customerId:number) {
    
     return this.http.put("http://localhost:9091/LoanDisbursement/loanDisbursementupdate/"+customerId+"",this.loandisbursement);

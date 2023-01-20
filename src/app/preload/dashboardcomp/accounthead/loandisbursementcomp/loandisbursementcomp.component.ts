@@ -35,7 +35,7 @@ export class LoandisbursementcompComponent {
      dealerBankIfscNumber:[''],
    })
  }
-
+message:any;
  disburseloan()
  {
    this.cs.loandisbursement.agreementId=this.loandisburseform.get('agreementId').value;
@@ -47,6 +47,8 @@ export class LoandisbursementcompComponent {
    this.cs.loandisbursement.dealerBankName=this.loandisbusrecustomer.customerDealer.dealerBankName;
    this.cs.loandisbursement.dealerBankIfscNumber=this.loandisbusrecustomer.customerDealer.dealerBankIfscNumber;
 
-   this.cs.disburseloan(this.loandisbusrecustomer.customerId).subscribe();
+   this.cs.disburseloan(this.loandisbusrecustomer.customerId).subscribe((response:any)=>{
+    this.message=response.message;
+   });
  }
 }

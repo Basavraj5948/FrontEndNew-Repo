@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { Customerdetails } from 'src/app/classes/customerdetails';
 import { CommonserviceService } from 'src/app/common/commonservice.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-viewapplicantform',
@@ -29,12 +30,25 @@ export class ViewapplicantformComponent implements OnInit{
 
  docverified(customerId:number)
  {
-  alert(customerId);
+  Swal.fire({
+    position: 'top',
+    icon: 'success',
+    title: 'Documents are Verified !!',
+    showConfirmButton: false,
+    timer: 2000
+  })
        let loanstatus="documentverfied"
     this.cs.verifydetails(customerId,loanstatus).subscribe();
  }
  docrejected(customerId:number)
  {
+  Swal.fire({
+    position: 'top',
+    icon: 'success',
+    title: 'Documents are Rejected !!',
+    showConfirmButton: false,
+    timer: 2000
+  })
   let loanstatus="documentrejected"
  this.cs.verifydetails(customerId,loanstatus).subscribe();
  }

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { Menu } from 'src/app/classes/menu';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-dashboardcomp',
@@ -46,6 +47,13 @@ ngOnInit()
 
 logout()
 {
+  Swal.fire({
+    position: 'top',
+    icon: 'success',
+    title: 'Logout Successfull !!',
+    showConfirmButton: false,
+    timer: 2000
+  })
  this.router.navigateByUrl("/login");
 }
 

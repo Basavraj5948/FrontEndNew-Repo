@@ -58,6 +58,19 @@ export class CommonserviceService {
    customerLedger: new Ledger,
    customerSanctionLetter: new SanctionLetter
  }
+ santionletter:SanctionLetter={
+   sanctionId: 0,
+   sanctionDate: '',
+   applicantName: '',
+   contactDetails: '',
+   loanAmountSanctioned: 0,
+   rateOfInterest: 0,
+   loanTenure: 0,
+   monthlyEmiAmount: 0,
+   termsAndCondition: '',
+   sanctionStatus: '',
+   sanctionLetter: []
+ }
 
  PostEnquiry()
  {
@@ -105,8 +118,12 @@ export class CommonserviceService {
     return this.http.get("http://localhost:9091/sanction/getCustomer/"+loanstatus+"");
   }
 
-  generateSanction(customerId:number,data:any)
+  // generateSanction(customerId:number,data:any)
+  // {
+  //   return this.http.put("http://localhost:9091/sanction/generatePdf",data);
+  // }
+  generateSanction(customerId:number)
   {
-    return this.http.put("http://localhost:9091/sanction/updateCustomer/"+customerId,data);
+    return this.http.put("http://localhost:9091/sanction/generatePdf/"+customerId+"",this.santionletter);
   }
 }

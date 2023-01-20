@@ -25,31 +25,43 @@ h3{
 p{
 	font-family:  sans-serif;
 	font-weight: 900;
+	font-size: 20px;
 }
 .emi-check{
     width: 300px;
     .container{
-        background-color: #ce9ffc;
+        background-color: #e0d0ef;
     border: black 2px;
 	height: 100%;
+	border-radius: 10px;
+	padding: 15px;
     }
     .button{
-        background-color: brown;
-        color: #fff;
+		font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 		font-size: larger;
 		font-weight: inherit;
 		border-radius: 8px;
-		margin-top: 10px;
-		margin-bottom: 10px;
+		margin-top: 20px;
+		margin-bottom: 20px;
+		border-radius: 10px;
 }   }
 .customer-details{
 	
 	.container{
 		margin-top: 0px;
-		background-color: #ce9ffc;	
+		background-color: #e5d7f3;	
 		height: 100%;
+		border-radius: 10px;
+		padding: 15px;
 	}
 }
 label{
 	margin-bottom: -5px;
+}
+
+.form-outline{
+	padding: 15px;
+}
+.col{
+	padding: 15px;
 }

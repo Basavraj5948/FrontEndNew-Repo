@@ -4,6 +4,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Customerdetails } from 'src/app/classes/customerdetails';
 import { SanctionLetter } from 'src/app/classes/sanction-letter';
 import { CommonserviceService } from 'src/app/common/commonservice.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-generatesanctionletter',
@@ -61,7 +62,13 @@ console.log(this.customerdetails);
   }
 
   emicheck() {
-    alert("emi check from")
+    Swal.fire({
+      position: 'top',
+      icon: 'success',
+      title: 'Please Wait !!! Calculation Going on......',
+      showConfirmButton: false,
+      timer: 2000
+    })
     this.interest = this.emicheckform.get('rateOfInterest').value / (12 * 100);
     this.tenure = this.emicheckform.get('Tenure').value;
 
@@ -71,7 +78,8 @@ console.log(this.customerdetails);
     this.totalRepayment = this.emi * this.tenure;
   }
 
-  generateSanction() {
+  generateSanction() 
+  {
     this.cs.santionletter.sanctionId = this.sanctionletterform.get('sanctionId').value;
     this.cs.santionletter.sanctionDate = this.sanctionletterform.get('sanctionDate').value;
     this.cs.santionletter.applicantName = this.sanctionletterform.get('applicantName').value;
@@ -85,6 +93,13 @@ console.log(this.customerdetails);
     this.cs.santionletter.sanctionLetter = this.sanctionletterform.get('sanctionletter').value;
 
     this.cs.generateSanction(this.customerdetails.customerId).subscribe();
+    Swal.fire({
+      position: 'top',
+      icon: 'success',
+      title: 'Sanction Letter Generated !!!',
+      showConfirmButton: false,
+      timer: 2000
+    })
   }
 
 

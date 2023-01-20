@@ -1,9 +1,8 @@
 export class LoanDisbursement {
     
 agreementId:number;
-loanNo:number
-totalLoanAmount:number;
-transferAmount:number;
+totalLoanSanctionedAmount:number;
+transferedAmount:number;
 amountPaidDate:string;
 paymentStatus:string;
 dealerBankAccountNumber:number

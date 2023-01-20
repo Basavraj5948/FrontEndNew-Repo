@@ -35,8 +35,8 @@ export class ApplyforloanComponent {
       customerEmail: this.fb.control('', Validators.required),
       customerQualification: this.fb.control('', Validators.required),
       customerCibilScore: this.fb.control(0, Validators.required),
-
-      customerLoanStatus: this.fb.control('')
+      customerLoanStatus: this.fb.control(''),
+      customerLoanAmountRequired: this.fb.control('',Validators.required),
 
 
     }),
@@ -83,6 +83,8 @@ export class ApplyforloanComponent {
     customerVehicleInformation: this.fb.group({
       customerVehicleId:0, 
       customerVehicleModel: this.fb.control('', Validators.required),
+      customerVehicleChassisNumber: this.fb.control('', Validators.required),
+      customerVehiclePrice: this.fb.control(0, Validators.required),
       // customerVehicleChassis: this.fb.control('', Validators.required),
       // customerVehicleNumber: this.fb.control('', Validators.required),
       // customerVehicleRcNumber: this.fb.control('', Validators.required)
@@ -100,20 +102,18 @@ export class ApplyforloanComponent {
       sanctionId:0,
       sanctionDate: this.fb.control(''),
       applicantName: this.fb.control(''),
-      contactDetails: this.fb.control(''),
       loanAmountSanctioned: this.fb.control(0),
       rateOfInterest: this.fb.control(0),
       loanTenure:this.fb.control(0),
       monthlyEmiAmount: this.fb.control(0),
       termsAndCondition: this.fb.control(''),
-      sanctionStatus: this.fb.control(''),
       sanctionLetter: this.fb.control([]),
     }),
+    
     loanDisbursement:this.fb.group({
       agreementId:this.fb.control(0),
-loanNo:this.fb.control(0),
-totalLoanAmount:this.fb.control(0),
-transferAmount:this.fb.control(0),
+totalLoanSanctionedAmount:this.fb.control(0),
+transferedAmount:this.fb.control(0),
 amountPaidDate:this.fb.control(''),
 paymentStatus:this.fb.control(''),
 dealerBankAccountNumber:this.fb.control(0),
@@ -124,7 +124,7 @@ dealerBankIfscNumber:this.fb.control(''),
     ledger:this.fb.group({
       ledgerId:0,
 	ledgerCreatedDate:this.fb.control(''),
-	totalLoanAmount:this.fb.control(0),
+	totalPrincipalAmount:this.fb.control(0),
 	payableAmountwithInterest:this.fb.control(0),
 	tenure:this.fb.control(0),
 	monthlyEMI:this.fb.control(0),
@@ -132,7 +132,6 @@ dealerBankIfscNumber:this.fb.control(''),
 	remainingAmount:this.fb.control(0),
 	nextEmiStartDate:this.fb.control(''),
 	nextEmiEndDate:this.fb.control(''),
-	defaulterCount:this.fb.control(0),
 	previousEmiStatus:this.fb.control(''),
 	currentMonthEmiStatus:this.fb.control(''),
 	loanEndDate:this.fb.control(''),
@@ -179,22 +178,22 @@ dealerBankIfscNumber:this.fb.control(''),
 goForward(stepper: MatStepper){
     stepper.next();
 }
-  onselectfile1(event) {
+  onselectfile1(event:any) {
     this.panCard = event.target.files[0];
   }
-  onselectfile2(event) {
+  onselectfile2(event:any) {
     this.incomeProof = event.target.files[0];
   }
-  onselectfile3(event) {
+  onselectfile3(event:any) {
     this.photo = event.target.files[0];
   }
-  onselectfile4(event) {
+  onselectfile4(event:any) {
     this.aadharCard = event.target.files[0];
   }
-  onselectfile5(event) {
+  onselectfile5(event:any) {
     this.signature = event.target.files[0];
   }
-  onselectfile6(event) {
+  onselectfile6(event:any) {
     this.bankPassBook = event.target.files[0];
   }
   filename: 'Photo'
@@ -207,6 +206,7 @@ goForward(stepper: MatStepper){
       title: "Saving Process is started !! Wait for Back end Response",
       showConfirmButton: false,
       timer: 2000
+
     })
     
     this.cs.customerdetails.customerFirstName=this.Empregister.get("customerdetails").get("customerFirstName").value
@@ -221,7 +221,7 @@ goForward(stepper: MatStepper){
     this.cs.customerdetails.customerGender=this.Empregister.get("customerdetails").get("customerGender").value
     this.cs.customerdetails.customerQualification=this.Empregister.get("customerdetails").get("customerQualification").value
     this.cs.customerdetails.customerCibilScore=this.Empregister.get("customerdetails").get("customerCibilScore").value
-    //this.cs.customerdetails.customerLoanStatus=this.Empregister.get("customerdetails").get("customerLoanStatus").value
+    this.cs.customerdetails.customerLoanAmountRequired=this.Empregister.get("customerdetails").get("customerLoanAmountRequired").value
     
     this.cs.customerdetails.customerAddress=this.Empregister.get("customerAddress").value
     this.cs.customerdetails.customerAddress.addressId=this.Empregister.get("customerAddress").get("addressId").value

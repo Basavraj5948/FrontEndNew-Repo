@@ -10,7 +10,7 @@
                     <ng-template matStepLabel>Fill Basic Details</ng-template>
                         <!-- <p> -->
                         <mat-form-field appearance="outline">
-                            <mat-label>First Name</mat-label>
+                            <!-- <mat-label>First Name</mat-label> -->
                             <input matInput formControlName="customerFirstName" required placeholder="First Name">
                         </mat-form-field>
 
@@ -75,10 +75,10 @@
                             <input matInput formControlName="customerCibilScore" required placeholder="CIBIL score">
                         </mat-form-field>
                         
-                        <!-- <mat-form-field appearance="outline"> -->
+                        <mat-form-field appearance="outline">
                             <!-- <mat-label>Loan Status</mat-label> -->
-                            <!-- <input matInput formControlName="customerLoanStatus" required placeholder="Loan Status">
-                        </mat-form-field> -->
+                             <input matInput formControlName="customerLoanAmountRequired" required placeholder="Required Loan Amount">
+                        </mat-form-field>
                     
                     <div>
                         <button mat-raised-button color="primary" matStepperNext type="button">Next</button>
@@ -203,15 +203,15 @@
                 <div formGroupName="customerBankDetails">
                     <mat-form-field appearance="fill">
                         <!-- <mat-label>Account No</mat-label> -->
-                        <input matInput formControlName="customerBankAccountNumber" required placeholder="Account Number">
+                        <input matInput formControlName="customerBankAccountNumber" required placeholder=" Customer Account Number">
                     </mat-form-field>
                     <mat-form-field appearance="fill">
                         <!-- <mat-label>Bank Name</mat-label> -->
-                        <input matInput formControlName="customerBankName" required placeholder="Bank Name">
+                        <input matInput formControlName="customerBankName" required placeholder=" Customer Bank Name">
                     </mat-form-field>
                     <mat-form-field appearance="fill">
                         <!-- <mat-label>Branch</mat-label> -->
-                        <input matInput formControlName="customerBankBranchName" required placeholder="Branch Name">
+                        <input matInput formControlName="customerBankBranchName" required placeholder="Customer Branch Name">
                     </mat-form-field>
                     <mat-form-field appearance="fill">
                         <!-- <mat-label>IFSC code</mat-label> -->
@@ -229,6 +229,15 @@
                     <mat-form-field appearance="fill">
                         <!-- <mat-label>Model</mat-label> -->
                         <input matInput formControlName="customerVehicleModel" required placeholder="Vehicle Model">
+                    </mat-form-field>
+
+                    <mat-form-field appearance="fill">
+                        <!-- <mat-label>Model</mat-label> -->
+                        <input matInput formControlName="customerVehicleChassisNumber" required placeholder="Vehicle Chassis Number">
+                    </mat-form-field>
+                    <mat-form-field appearance="fill">
+                        <!-- <mat-label>Model</mat-label> -->
+                        <input matInput formControlName="customerVehiclePrice" required placeholder="Vehicle Price">
                     </mat-form-field>
                     <div>
                         <button mat-raised-button color="primary" matStepperPrevious type="button">Back</button> |
@@ -277,27 +286,27 @@
 
                 <div class="mb-3">
                     <label for="exampleInputName">PanCard : </label>
-                    <input type="file" (change)="onselectfile1($event)">
+                    <input style="margin-left:10px;" type="file" (change)="onselectfile1($event)">
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputName">Income Proof : </label>
-                    <input type="file" (change)="onselectfile2($event)">
+                    <input style="margin-left:10px;"type="file" (change)="onselectfile2($event)">
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputName">Photo : </label>
-                    <input type="file" class="file-input" (change)="onselectfile3($event)" #fileUpload>
+                    <input style="margin-left:10px;"type="file" class="file-input" (change)="onselectfile3($event)" #fileUpload>
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputName">AadharCard : </label>
-                    <input type="file" class="file-input" (change)="onselectfile4($event)" #fileUpload>
+                    <input style="margin-left:10px;"type="file" class="file-input" (change)="onselectfile4($event)" #fileUpload>
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputName">Signature : </label>
-                    <input type="file" class="file-input" (change)="onselectfile5($event)" #fileUpload>
+                    <input style="margin-left:10px;" type="file" class="file-input" (change)="onselectfile5($event)" #fileUpload>
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputName">Bank Passbook : </label>
-                    <input type="file" class="file-input" (change)="onselectfile6($event)" #fileUpload>
+                    <input style="margin-left:10px;"type="file" class="file-input" (change)="onselectfile6($event)" #fileUpload>
                 </div>
                 <br><br><br>
                 <div>
@@ -337,7 +346,7 @@
                 <br><br><br>
                 <div>
                     <button mat-raised-button color="primary" matStepperPrevious type="button">Back</button> |
-                    <input type="submit" mat-raised-button color="accent" value="Submit">
+                    <button mat-raised-button color="primary" type="submit">Submit</button>
                 </div>
             </mat-step>
         </mat-stepper>

@@ -1,7 +1,7 @@
 export class Ledger {
     ledgerId:number;
 	ledgerCreatedDate:string;
-	totalLoanAmount:number;
+	totalPrincipalAmount:number;
 	payableAmountwithInterest:number;
 	tenure:number;
 	monthlyEMI:number;
@@ -9,7 +9,6 @@ export class Ledger {
 	remainingAmount:number;
 	nextEmiStartDate:string;
 	nextEmiEndDate:string;
-	defaulterCount:number;
 	previousEmiStatus:string;
 	currentMonthEmiStatus:string;
 	loanEndDate:string;

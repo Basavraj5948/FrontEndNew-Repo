@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { Customerdetails } from 'src/app/classes/customerdetails';
 import { CommonserviceService } from 'src/app/common/commonservice.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-viewverifiedapplications',
@@ -21,7 +22,13 @@ export class ViewverifiedapplicationsComponent {
   
   createsanctionletter(verifiedcustomerdetails:Customerdetails)
   {
-   
+    Swal.fire({
+      position: 'top',
+      icon: 'success',
+      title: 'Please Wait !!!!!!!',
+      showConfirmButton: false,
+      timer: 2000
+    })
     this.router.navigate(["./dashboard/creditmanager/generatesanctionletter/"],
         {queryParams:{data:JSON.stringify(verifiedcustomerdetails)}});
   }

@@ -24,6 +24,8 @@ export class Customerdetails {
     customerQualification:string;
     customerCibilScore:number;
     customerLoanStatus:string;
+    customerLoanAmountRequired:string;
+    
     customerAllDocuments:CustomerAllDocuments;
     customerAddress:CustomerAddress;
     customerProfession:CustomerProfession;

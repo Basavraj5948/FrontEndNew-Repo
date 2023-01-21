@@ -7,7 +7,7 @@
                 <!-- 1st form here -->
                 <div formGroupName="customerdetails">
                     <!-- label for Each form will be displayed here -->
-                    <ng-template matStepLabel>Fill Basic Details</ng-template>
+                    <ng-template matStepLabel>Personal Details</ng-template>
                         <!-- <p> -->
                         <mat-form-field appearance="outline">
                             <!-- <mat-label>First Name</mat-label> -->
@@ -15,7 +15,7 @@
                         </mat-form-field>
 
                         
-                    <!-- </p> -->
+                    
                         <mat-form-field appearance="outline">
                             <!-- <mat-label>Last Name</mat-label> -->
                             <input matInput formControlName="customerLastName" required placeholder="Last Name">
@@ -55,7 +55,6 @@
                         <mat-radio-group formControlName="customerGender">
                             <mat-radio-button value="Male">Male</mat-radio-button>
                             <mat-radio-button value="Female">Female</mat-radio-button>
-                            <!-- <input type="date" matInput formControlName="customerGender" required placeholder="Gender of Birth"> -->
                         </mat-radio-group>
                           <br>
                         <mat-form-field appearance="outline">
@@ -129,7 +128,7 @@
                         <input matInput formControlName="localStreetName" required placeholder="Street or Landmark">
                     </mat-form-field>
 
-                    <h2>Permanent Address</h2>
+                    <h2>Permanent Address</h2>    <!--  <input type="checkbox" (click)="fillinfo()" value="AUTOFILL"><br><br> -->
 
                     <mat-form-field>
                         <!-- <mat-label>State</mat-label> -->
@@ -233,10 +232,6 @@
 
                     <mat-form-field appearance="fill">
                         <!-- <mat-label>Model</mat-label> -->
-                        <input matInput formControlName="customerVehicleChassisNumber" required placeholder="Vehicle Chassis Number">
-                    </mat-form-field>
-                    <mat-form-field appearance="fill">
-                        <!-- <mat-label>Model</mat-label> -->
                         <input matInput formControlName="customerVehiclePrice" required placeholder="Vehicle Price">
                     </mat-form-field>
                     <div>
@@ -318,31 +313,46 @@
             <mat-step label="ALL Details">
 
                 <mat-list>
-                    <mat-list-item> <strong>First Name:</strong> {{ this.Empregister.value.customerdetails.customerFirstName
-                        }}</mat-list-item>
-                    <mat-list-item> <strong>First Name:</strong> {{ this.Empregister.value.customerdetails.customerMiddleName
-                        }}</mat-list-item>
-                    <mat-list-item> <strong>First Name:</strong> {{ this.Empregister.value.customerdetails.customerLastName
-                        }}</mat-list-item>
-                    <mat-list-item> <strong>First Name:</strong> {{ this.Empregister.value.customerdetails.customerMobileNumber
-                        }}</mat-list-item>
-                    <mat-list-item> <strong>First Name:</strong> {{
-                        this.Empregister.value.customerdetails.customerAdditionalMobileNumber }}</mat-list-item>
-                    <mat-list-item> <strong>First Name:</strong> {{ this.Empregister.value.customerdetails.customerPanCard
-                        }}</mat-list-item>
-                    <mat-list-item> <strong>First Name:</strong> {{ this.Empregister.value.customerdetails.customerAadharCard
-                        }}</mat-list-item>
-                    <mat-list-item> <strong>First Name:</strong> {{ this.Empregister.value.customerdetails.customerDateOfBirth
-                        }}</mat-list-item>
-                    <mat-list-item> <strong>First Name:</strong> {{ this.Empregister.value.customerdetails.customerEmail
-                        }}</mat-list-item>
-                    <mat-list-item> <strong>First Name:</strong> {{ this.Empregister.value.customerdetails.customerQualification
-                        }}</mat-list-item>
-                    <mat-list-item> <strong>First Name:</strong> {{ this.Empregister.value.customerdetails.customerCibilScore
-                        }}</mat-list-item>
-                    <!-- <mat-list-item> <strong>First Name:</strong> {{ this.Empregister.value.customerdetails.customerLoanStatus
-                        }}</mat-list-item> -->
-                     </mat-list>
+                    <mat-list-item> <strong>First Name:</strong> {{ this.Empregister.value.customerdetails.customerFirstName}}</mat-list-item>
+                    <mat-list-item> <strong>Middle Name:</strong> {{ this.Empregister.value.customerdetails.customerMiddleName}}</mat-list-item>
+                    <mat-list-item> <strong>Last Name:</strong> {{ this.Empregister.value.customerdetails.customerLastName}}</mat-list-item>
+                    <mat-list-item> <strong>Mobile Number:</strong> {{ this.Empregister.value.customerdetails.customerMobileNumber}}</mat-list-item>
+                    <mat-list-item> <strong>Additional Mobile Number:</strong> {{this.Empregister.value.customerdetails.customerAdditionalMobileNumber }}</mat-list-item>
+                    <mat-list-item> <strong>PAN Number:</strong> {{ this.Empregister.value.customerdetails.customerPanCard}}</mat-list-item>
+                    <mat-list-item> <strong>Aadhar Number:</strong> {{ this.Empregister.value.customerdetails.customerAadharCard}}</mat-list-item>
+                    <mat-list-item> <strong>Birth Date:</strong> {{ this.Empregister.value.customerdetails.customerDateOfBirth}}</mat-list-item>
+                    <mat-list-item> <strong>Email Id:</strong> {{ this.Empregister.value.customerdetails.customerEmail}}</mat-list-item>
+                    <mat-list-item> <strong>Qualifications:</strong> {{ this.Empregister.value.customerdetails.customerQualification}}</mat-list-item>
+                    <mat-list-item> <strong>CIBIL Score:</strong> {{ this.Empregister.value.customerdetails.customerCibilScore}}</mat-list-item>
+                    <mat-list-item> <strong>Loan Required:</strong> {{ this.Empregister.value.customerdetails.customerLoanAmountRequired}}</mat-list-item>
+                <br><h2>Address Details</h2>
+                    <mat-list-item> <strong>State:</strong> {{ this.Empregister.value.customerAddress.localState}}</mat-list-item>
+                    <mat-list-item> <strong>District:</strong> {{ this.Empregister.value.customerAddress.localDistrict}}</mat-list-item>
+                    <mat-list-item> <strong>City:</strong> {{ this.Empregister.value.customerAddress.localCityName}}</mat-list-item>
+                    <mat-list-item> <strong>Area:</strong> {{ this.Empregister.value.customerAddress.localAreaName}}</mat-list-item>
+                    <mat-list-item> <strong>Street:</strong> {{ this.Empregister.value.customerAddress.localStreetName}}</mat-list-item>
+                    <mat-list-item> <strong>House No:</strong> {{ this.Empregister.value.customerAddress.localHouseNumber}}</mat-list-item>
+                    <mat-list-item> <strong>Pin:</strong> {{ this.Empregister.value.customerAddress.localPincode}}</mat-list-item>
+                 <br><h2>Profession Details</h2>
+                    <mat-list-item> <strong>Type:</strong> {{ this.Empregister.value.customerProfession.professionType}}</mat-list-item>
+                    <mat-list-item> <strong>Monthly Income:</strong> {{ this.Empregister.value.customerProfession.professionMonthlyIncome}}</mat-list-item>
+                    <mat-list-item> <strong>Designation:</strong> {{ this.Empregister.value.customerProfession.professionDesignation}}</mat-list-item>
+                <br><h2>Bank Details</h2>
+                    <mat-list-item> <strong>Bank Name:</strong> {{ this.Empregister.value.customerBankDetails.customerBankName}}</mat-list-item>
+                    <mat-list-item> <strong>Branch:</strong> {{ this.Empregister.value.customerBankDetails.customerBankBranchName}}</mat-list-item>
+                    <mat-list-item> <strong>Account No:</strong> {{ this.Empregister.value.customerBankDetails.customerBankAccountNumber}}</mat-list-item>
+                    <mat-list-item> <strong>IFSC:</strong> {{ this.Empregister.value.customerBankDetails.customerBankIfscNumber}}</mat-list-item>
+                <br><h2>Vehicle Details</h2>
+                    <mat-list-item> <strong>Model:</strong> {{ this.Empregister.value.customerVehicleInformation.customerVehicleModel}}</mat-list-item>
+                    <mat-list-item> <strong>Price:</strong> {{ this.Empregister.value.customerVehicleInformation.customerVehiclePrice}}</mat-list-item>
+                <br><h2>Dealer Details</h2>
+                <mat-list-item> <strong>Model:</strong> {{ this.Empregister.value.customerDealer.dealerName}}</mat-list-item>
+                <mat-list-item> <strong>Model:</strong> {{ this.Empregister.value.customerDealer.dealerAddress}}</mat-list-item>
+                <mat-list-item> <strong>Model:</strong> {{ this.Empregister.value.customerDealer.dealerBankName}}</mat-list-item>
+                <mat-list-item> <strong>Model:</strong> {{ this.Empregister.value.customerDealer.dealerBankBranchName}}</mat-list-item>
+                <mat-list-item> <strong>Model:</strong> {{ this.Empregister.value.customerDealer.dealerBankAccountNumber}}</mat-list-item>
+                <mat-list-item> <strong>Model:</strong> {{ this.Empregister.value.customerDealer.dealerBankIfscNumber}}</mat-list-item>                
+                </mat-list>
                 <br><br><br>
                 <div>
                     <button mat-raised-button color="primary" matStepperPrevious type="button">Back</button> |

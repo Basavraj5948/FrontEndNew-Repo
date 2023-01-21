@@ -85,9 +85,7 @@ export class ApplyforloanComponent {
       customerVehicleModel: this.fb.control('', Validators.required),
       customerVehicleChassisNumber: this.fb.control('', Validators.required),
       customerVehiclePrice: this.fb.control(0, Validators.required),
-      // customerVehicleChassis: this.fb.control('', Validators.required),
-      // customerVehicleNumber: this.fb.control('', Validators.required),
-      // customerVehicleRcNumber: this.fb.control('', Validators.required)
+      
     }),
     customerAllDocuments: this.fb.group({
       documentId:0, 
@@ -171,13 +169,28 @@ dealerBankIfscNumber:this.fb.control(''),
   aadharCard: any;
   bankPassBook: any;
 
-  goBack(stepper: MatStepper){
-    stepper.previous();
+//   goBack(stepper: MatStepper){
+//     stepper.previous();
+// }
+
+// goForward(stepper: MatStepper){
+//     stepper.next();
+// }
+
+
+fillinfo(){
+    
+  this.Empregister.patchValue({
+    
+    
+  })
+
+  
 }
 
-goForward(stepper: MatStepper){
-    stepper.next();
-}
+
+
+
   onselectfile1(event:any) {
     this.panCard = event.target.files[0];
   }

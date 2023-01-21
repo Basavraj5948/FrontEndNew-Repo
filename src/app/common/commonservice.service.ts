@@ -147,5 +147,9 @@ export class CommonserviceService {
    
     return this.http.put("http://localhost:9091/LoanDisbursement/loanDisbursementupdate/"+customerId+"",this.loandisbursement);
   }
+  sendsanletterMail(customerId:number)
+  {
+    return this.http.get("http://localhost:9091/mail/sendSantionLetterMail/"+customerId+"");
+  }
 }
  

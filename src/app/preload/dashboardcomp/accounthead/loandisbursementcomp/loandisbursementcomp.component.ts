@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { Customerdetails } from 'src/app/classes/customerdetails';
 import { CommonserviceService } from 'src/app/common/commonservice.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-loandisbursementcomp',
@@ -36,8 +37,16 @@ export class LoandisbursementcompComponent {
    })
  }
 message:any;
+
  disburseloan()
  {
+  Swal.fire({
+    position: 'top',
+    icon: 'success',
+    title: 'Loan Disbursement successfull !!!!!',
+    showConfirmButton: false,
+    timer: 2000
+  })
    this.cs.loandisbursement.agreementId=this.loandisburseform.get('agreementId').value;
    this.cs.loandisbursement.totalLoanSanctionedAmount=this.loandisbusrecustomer.customerSanctionLetter.loanAmountSanctioned;
    this.cs.loandisbursement.transferedAmount=this.loandisburseform.get('transferedAmount').value;
@@ -48,7 +57,13 @@ message:any;
    this.cs.loandisbursement.dealerBankIfscNumber=this.loandisbusrecustomer.customerDealer.dealerBankIfscNumber;
 
    this.cs.disburseloan(this.loandisbusrecustomer.customerId).subscribe((response:any)=>{
-    this.message=response.message;
+    Swal.fire({
+      position: 'top',
+      icon: 'success',
+      title: response.message,
+      showConfirmButton: false,
+      timer: 2000
+    })
    });
  }
 }

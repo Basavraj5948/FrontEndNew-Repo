@@ -199,34 +199,41 @@
   </div>
 </div>
 <h2>Documents : </h2>
-<div class="row mb-5">
-  <div class="col">
-    <label>Pancard</label>
-    <img id="image" [src]="'data:image/jpeg;base64,'+customerdetails.customerAllDocuments.panCard" >
+<div class="col">
+  <div class="row">
+    <label>Pancard:</label>
+    <button type="button" (click)="show()" id="btnID" >Show Pancard</button>
+    <img style="display: none;"  id="image" [src]="'data:image/jpeg;base64,'+customerdetails.customerAllDocuments.panCard" >
     
   </div>  
-  <div class="col">
-    <label>AadharCard :</label>
-    <img [src]="'data:image/jpeg;base64,'+customerdetails.customerAllDocuments.aadharCard">
+  <div class="row">
+    <label>AadharCard:</label>
+    <button type="button" (click)="show()" id="btnID" >Show AadharCard</button>
+    <embed src="file_name.pdf" width="800px" height="2100px" />
+    <a  href="customerdetails.customerAllDocuments.aadharCard"></a>
   </div>
-  <div class="col">
-    <label>Income Proof :</label>
-    <img [src]="'data:image/jpeg;base64,'+customerdetails.customerAllDocuments.incomeProof" width="260" height="180">
+
+  <div class="row">
+    <button class="" type="button" (click)="showIP()" id="btnIDIP" >Show Income Proof </button>
+    <img style="display: none;" id="imageIP" [src]="'data:image/jpeg;base64,'+customerdetails.customerAllDocuments.incomeProof">
   </div>
-  </div>
-  <div class="row mb-5">
-    <div class="col">
-      <label>Photo :</label>
-      <img [src]="'data:image/jpeg;base64,'+customerdetails.customerAllDocuments.photo" width="260" height="180">
+  
+    <div class="row">
+      <label>Photo:</label>
+      <button type="button" (click)="showP()" id="btnIDP" >Show Photo</button>
+    <img style="display: none;" id="imageP" [src]="'data:image/jpeg;base64,'+customerdetails.customerAllDocuments.photo">
+    </div>
+
+    <div class="row">
+      <label>Signature:</label>
+      <button type="button" (click)="showS()" id="btnIDS" >Show Signature</button>
+      <img style="display: none;" id="imageS" [src]="'data:image/jpeg;base64,'+customerdetails.customerAllDocuments.signature">
+    </div>
+    <div class="row">
       
-    </div>
-    <div class="col">
-      <label>Signature :</label>
-      <img [src]="'data:image/jpeg;base64,'+customerdetails.customerAllDocuments.signature" width="260" height="180">
-    </div>
-    <div class="col">
-      <label>Bank Passbook :</label>
-      <img [src]="'data:image/jpeg;base64,'+customerdetails.customerAllDocuments.bankPassBook" width="260" height="180">
+      <label>Bank Passbook:</label>
+      <button type="button" (click)="showPass()" id="btnIDPass" >Show Bank Passbook </button>
+      <img style="display: none;" id="imagePass" [src]="'data:image/jpeg;base64,'+customerdetails.customerAllDocuments.bankPassBook" width="260" height="180">
     </div>
     </div>
   

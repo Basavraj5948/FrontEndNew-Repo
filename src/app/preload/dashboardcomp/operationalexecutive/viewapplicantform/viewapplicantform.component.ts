@@ -27,6 +27,51 @@ export class ViewapplicantformComponent implements OnInit{
     this.customerdetails=JSON.parse(params['data']);
    })
  }
+ show() {
+  /* Access image by id and change
+  the display property to block*/
+  document.getElementById('image')
+          .style.display = "block";
+
+  document.getElementById('btnID')
+          .style.display = "none";
+}
+showIP() {
+  /* Access image by id and change
+  the display property to block*/
+  document.getElementById('imageIP')
+          .style.display = "block";
+
+  document.getElementById('btnIDIP')
+          .style.display = "none";
+}
+showP() {
+  /* Access image by id and change
+  the display property to block*/
+  document.getElementById('imageP')
+          .style.display = "block";
+
+  document.getElementById('btnIDP')
+          .style.display = "none";
+}
+showS() {
+  /* Access image by id and change
+  the display property to block*/
+  document.getElementById('imageS')
+          .style.display = "block";
+
+  document.getElementById('btnIDS')
+          .style.display = "none";
+}
+showPass() {
+  /* Access image by id and change
+  the display property to block*/
+  document.getElementById('imagePass')
+          .style.display = "block";
+
+  document.getElementById('btnIDPass')
+          .style.display = "none";
+}
 
  docverified(customerId:number)
  {

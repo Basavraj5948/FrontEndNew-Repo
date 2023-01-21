@@ -29,7 +29,7 @@
         <th scope="row">{{customer.customerLoanStatus}}</th>
      
         <th *ngIf="customer.customerLoanStatus==='SanctionLetterGenerated'" scope="row"><button style="background-color: rgb(174, 106, 237);color: white;border-radius: 10px;padding: 3px;padding-left: 5px;padding-right: 5px;" (click)="viewSanctionLetter(customer)">View Sanction Letter</button></th>
-        <th *ngIf="customer.customerLoanStatus==='SanctionLetterGenerated'" scope="row"><button style="background-color: rgb(174, 106, 237);color: white;border-radius: 10px;padding: 3px;padding-left: 5px;padding-right: 5px;" (click)="viewSanctionLetter(customer)">Send Sanction Letter</button></th>
+        <th *ngIf="customer.customerLoanStatus==='SanctionLetterGenerated'" scope="row"><button style="background-color: rgb(174, 106, 237);color: white;border-radius: 10px;padding: 3px;padding-left: 5px;padding-right: 5px;" (click)="sendsanletter(customer)">Send San.Letter Mail</button></th>
         <!-- <td><button style="background-color: rgb(174, 106, 237);color: white;border-radius: 10px;padding: 3px;padding-left: 5px;padding-right: 5px;" (click)="sendMail(data)">Send Mail</button> </td>
         <td><button style="background-color: rgb(174, 106, 237);color: white;border-radius: 10px;padding: 3px;padding-left: 5px;padding-right: 5px;" (click)="fillform(data)">Apply for Loan</button> </td> -->
       </tr>
